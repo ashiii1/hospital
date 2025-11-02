@@ -4,7 +4,8 @@ import { Award } from 'lucide-react'
 import CountUp from '../components/CountUp'
 import { useState } from 'react'
 
-// X-ray images import
+// Achievement images import
+import msmchSurgery from '../assets/MSMCH-surgery.jpg'
 import tkrXray from '../assets/TKR.Total knee replacement.jpeg'
 import shoulderXray from '../assets/shoulder Replacement.jpeg'
 import spineXray from '../assets/Cervical spine fixation.jpeg'
@@ -12,6 +13,7 @@ import pelvicXray from '../assets/Pelvic fracture.jpeg'
 import polytraumaXray from '../assets/DHS .PFN.fixation.jpeg'
 
 const xrayImages = {
+  1: msmchSurgery,    // First MSMCH Ortho in Kavali
   3: tkrXray,         // Golden Knee Surgery
   4: shoulderXray,    // Shoulder Replacement
   8: spineXray,       // Spine Surgeries
