@@ -209,52 +209,50 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <FadeIn>
-        <section className="hero-section-new hero-parallax" role="banner">
-          {/* Video Background */}
-          <div className={`hero-video-background ${videoLoaded ? 'video-loaded' : ''}`}>
-            <video 
-              ref={videoRef}
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="hero-video"
-              preload="auto"
-              onLoadedData={() => setVideoLoaded(true)}
-              onCanPlay={() => setVideoLoaded(true)}
-            >
-              <source src={heroVideo} type="video/mp4" />
-            </video>
-            <div className="hero-video-overlay"></div>
+      {/* Hero Section - No FadeIn wrapper so video plays immediately */}
+      <section className="hero-section-new hero-parallax animate-in" role="banner">
+        {/* Video Background */}
+        <div className={`hero-video-background ${videoLoaded ? 'video-loaded' : ''}`}>
+          <video 
+            ref={videoRef}
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="hero-video"
+            preload="auto"
+            onLoadedData={() => setVideoLoaded(true)}
+            onCanPlay={() => setVideoLoaded(true)}
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="hero-video-overlay"></div>
+        </div>
+        
+        <div className="hero-content-new">
+          <div className="hero-badge">{t.home.heroBadge}</div>
+          <h1 className="hero-title-new">{t.brand}</h1>
+          <p className="hero-subtitle-new" dangerouslySetInnerHTML={{ __html: t.home.tagline }}>
+          </p>
+          <div className="hero-actions">
+            <Link className="btn btn-large btn-with-icon" to="/services" aria-label="Browse our medical services">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              {t.home.exploreServices}
+            </Link>
+            <Link className="btn btn-outline-large btn-with-icon" to="/facilities" aria-label="Discover our world-class facilities">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+              {t.home.discoverFacilities}
+            </Link>
           </div>
-          
-          <div className="hero-content-new">
-            <div className="hero-badge">{t.home.heroBadge}</div>
-            <h1 className="hero-title-new">{t.brand}</h1>
-            <p className="hero-subtitle-new" dangerouslySetInnerHTML={{ __html: t.home.tagline }}>
-            </p>
-            <div className="hero-actions">
-              <Link className="btn btn-large btn-with-icon" to="/services" aria-label="Browse our medical services">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-                {t.home.exploreServices}
-              </Link>
-              <Link className="btn btn-outline-large btn-with-icon" to="/facilities" aria-label="Discover our world-class facilities">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="3" y="3" width="7" height="7"/>
-                  <rect x="14" y="3" width="7" height="7"/>
-                  <rect x="14" y="14" width="7" height="7"/>
-                  <rect x="3" y="14" width="7" height="7"/>
-                </svg>
-                {t.home.discoverFacilities}
-              </Link>
-            </div>
-          </div>
-        </section>
-      </FadeIn>
+        </div>
+      </section>
 
       {/* KPI Stats Section */}
       <ScaleIn>
