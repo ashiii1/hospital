@@ -46,7 +46,7 @@ function App() {
         <div className="topbar-content">
           <div className="topbar-left">
             <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="topbar-logo" />
-            <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-address" aria-label="Get directions to hospital">
+            <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-address" aria-label="Get directions to hospital">
               <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
@@ -163,7 +163,7 @@ function App() {
           <span className="action-label">{t.quickActions.whatsapp}</span>
         </a>
         
-        <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" className="quick-action-btn" target="_blank" rel="noreferrer" aria-label="Get location">
+        <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" className="quick-action-btn" target="_blank" rel="noreferrer" aria-label="Get location">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
             <circle cx="12" cy="10" r="3"/>
@@ -208,7 +208,7 @@ function App() {
         <div className="footer-main">
           <div>© {new Date().getFullYear()} {t.brand}</div>
           <div className="links">
-            <a href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
+            <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
             <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
             <a href="https://www.instagram.com/drramaswamyhospitals/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
           </div>
