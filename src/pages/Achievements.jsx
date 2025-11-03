@@ -11,14 +11,26 @@ import shoulderXray from '../assets/shoulder Replacement.jpeg'
 import spineXray from '../assets/Cervical spine fixation.jpeg'
 import pelvicXray from '../assets/Pelvic fracture.jpeg'
 import polytraumaXray from '../assets/DHS .PFN.fixation.jpeg'
+import tumourImg from '../assets/Tumor.jpeg'
+import surgicalVolumeImg from '../assets/High surgerical volume.jpeg'
+import paediatricImg from '../assets/paediatric care.jpeg'
+import geriatricImg from '../assets/Geriatric care.jpeg'
+import softTissueImg from '../assets/Tissue reconstruction.jpeg'
+import tendonTransferImg from '../assets/Tendon transfer.jpeg'
 
 const xrayImages = {
-  1: msmchSurgery,    // First MSMCH Ortho in Kavali
-  3: tkrXray,         // Golden Knee Surgery
-  4: shoulderXray,    // Shoulder Replacement
-  8: spineXray,       // Spine Surgeries
-  9: polytraumaXray,  // Polytrauma Management
-  10: pelvicXray,     // Pelvic Fixation
+  1: msmchSurgery,        // First MSMCH Ortho in Kavali
+  3: tkrXray,             // Golden Knee Surgery
+  4: shoulderXray,        // Shoulder Replacement
+  6: tumourImg,           // Tumour Procedures
+  8: spineXray,           // Spine Surgeries
+  9: polytraumaXray,      // Polytrauma Management
+  10: pelvicXray,         // Pelvic Fixation
+  11: surgicalVolumeImg,  // High Surgical Volume
+  12: paediatricImg,      // Paediatric Trauma Care
+  13: geriatricImg,       // Geriatric Trauma Care
+  14: softTissueImg,      // Soft Tissue Reconstruction
+  15: tendonTransferImg,  // Tendon Transfer
 }
 
 export default function Achievements() {
