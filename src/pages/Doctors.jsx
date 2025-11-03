@@ -67,50 +67,60 @@ export default function Doctors() {
       {/* Doctors Grid */}
       <StaggerContainer className="doctors-grid">
         {doctors.map((doctor, index) => (
-          <div key={index} className="doctor-card-new">
-            <div className="doctor-card-header">
-              <div className="doctor-card-avatar-new">
-                {doctor.image ? (
-                  <img 
-                    src={doctor.image} 
-                    alt={doctor.name}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      borderRadius: '50%'
-                    }}
-                  />
-                ) : (
-                  <div style={{
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '3rem',
-                    fontWeight: 'bold',
-                    color: 'white',
-                    background: 'linear-gradient(135deg, #088395 0%, #05606E 100%)'
-                  }}>
-                    {doctor.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </div>
-                )}
+          <div key={index} className="doctor-card-enhanced">
+            <div className="doctor-card-header-enhanced">
+              <div className="header-pattern"></div>
+              <div className="doctor-avatar-wrapper">
+                <div className="doctor-card-avatar-enhanced">
+                  {doctor.image ? (
+                    <img 
+                      src={doctor.image} 
+                      alt={doctor.name}
+                      className="doctor-avatar-image"
+                    />
+                  ) : (
+                    <div className="doctor-avatar-placeholder">
+                      <span className="initials-text">
+                        {doctor.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="avatar-glow"></div>
               </div>
             </div>
             
-            <div className="doctor-card-body">
-              <h3 className="doctor-card-name">{doctor.name}</h3>
-              <p className="doctor-card-specialty">{doctor.specialty}</p>
-              <p className="doctor-card-education">{doctor.education}</p>
+            <div className="doctor-card-content">
+              <h3 className="doctor-name-enhanced">{doctor.name}</h3>
+              <p className="doctor-specialty-enhanced">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+                {doctor.specialty}
+              </p>
+              <p className="doctor-education-enhanced">{doctor.education}</p>
               
-              <div className="doctor-specialties-tags">
+              <div className="doctor-specialties-enhanced">
                 {doctor.specialties.map((spec, idx) => (
-                  <span key={idx} className="specialty-tag">{spec}</span>
+                  <span key={idx} className="specialty-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                      <circle cx="12" cy="12" r="10"/>
+                    </svg>
+                    {spec}
+                  </span>
                 ))}
               </div>
               
-              <p className="doctor-card-bio">{doctor.bio}</p>
+              <p className="doctor-bio-enhanced">{doctor.bio}</p>
+              
+              <div className="doctor-card-footer">
+                <a href="tel:+919912757854" className="contact-doctor-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  Contact Doctor
+                </a>
+              </div>
             </div>
           </div>
         ))}
