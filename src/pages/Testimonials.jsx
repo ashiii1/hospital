@@ -3,6 +3,7 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
+import { ChevronDown, HelpCircle } from 'lucide-react'
 
 export default function Testimonials() {
   const { t } = useI18n()
@@ -113,6 +114,36 @@ export default function Testimonials() {
     setIsPaused(true)
     setCurrentIndex(index)
     setTimeout(() => setIsPaused(false), 3000) // Resume after 3 seconds
+  }
+
+  // FAQ Data
+  const faqs = [
+    {
+      question: "What specialties are available at Dr. Ramaswamy Hospitals?",
+      answer: "We offer a wide range of specialties including Orthopedics, General Medicine, General Surgery, Urology, Nephrology. Our multi-speciality setup ensures that patients receive comprehensive and coordinated care under one roof."
+    },
+    {
+      question: "Do you offer emergency and 24/7 services?",
+      answer: "Yes, our hospital provides round-the-clock emergency services, supported by an experienced team of doctors, nurses, and technicians."
+    },
+    {
+      question: "How can I book an appointment with a doctor?",
+      answer: "Appointments cannot be booked before hand. We do not book appointment. We offer First in First out of patients."
+    },
+    {
+      question: "Do you provide cashless treatment or insurance support?",
+      answer: "Yes, we are empanelled with insurance providers and government health schemes. Our billing team assists patients in processing insurance claims and cashless treatment approvals smoothly."
+    },
+    {
+      question: "Is there a pharmacy inside the hospital?",
+      answer: "Yes, our in-house pharmacy operates 24/7, ensuring patients and their families can easily access prescribed medicines without delay."
+    }
+  ]
+
+  const [openFAQ, setOpenFAQ] = useState(null)
+
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index)
   }
   
   return (
@@ -236,6 +267,50 @@ export default function Testimonials() {
           ))}
         </StaggerContainer>
       </div>
+
+      {/* FAQ Section */}
+      <FadeIn>
+        <div style={{ marginTop: 80 }}>
+          <div className="faq-section-header">
+            <HelpCircle className="faq-icon" size={32} />
+            <h2 className="faq-section-title">Frequently Asked Questions</h2>
+            <p className="faq-section-subtitle">
+              Find answers to common questions about our services and facilities
+            </p>
+          </div>
+
+          <div className="faq-container">
+            {faqs.map((faq, index) => (
+              <div 
+                key={index} 
+                className={`faq-item ${openFAQ === index ? 'faq-item-open' : ''}`}
+              >
+                <button
+                  className="faq-question"
+                  onClick={() => toggleFAQ(index)}
+                  aria-expanded={openFAQ === index}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <span className="faq-question-number">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="faq-question-text">{faq.question}</span>
+                  <ChevronDown 
+                    className={`faq-chevron ${openFAQ === index ? 'faq-chevron-open' : ''}`} 
+                    size={20} 
+                  />
+                </button>
+                <div 
+                  className={`faq-answer ${openFAQ === index ? 'faq-answer-open' : ''}`}
+                  id={`faq-answer-${index}`}
+                >
+                  <div className="faq-answer-content">
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </FadeIn>
     </section>
   )
 }

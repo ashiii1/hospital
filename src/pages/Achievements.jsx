@@ -17,12 +17,19 @@ import paediatricImg from '../assets/paediatric care.jpeg'
 import geriatricImg from '../assets/Geriatric care.jpeg'
 import softTissueImg from '../assets/Tissue reconstruction.jpeg'
 import tendonTransferImg from '../assets/Tendon transfer.jpeg'
+import totalHipReplacement from '../assets/Total Hip Replacement .jpeg'
+import reverseShoulderReplacement from '../assets/Reverse shoulder replacement .jpeg'
+import revisionBefore from '../assets/Revision before .jpeg'
+import revisionAfter from '../assets/Revision after .jpeg'
 
 const xrayImages = {
   1: msmchSurgery,        // First MSMCH Ortho in Kavali
+  2: totalHipReplacement, // First Total Hip Replacement (THR) - 2005
   3: tkrXray,             // Golden Knee Surgery
   4: shoulderXray,        // Shoulder Replacement
+  5: reverseShoulderReplacement, // Reverse Shoulder Replacement
   6: tumourImg,           // Tumour Procedures
+  7: revisionBefore,      // Revision TKR and THR (Before)
   8: spineXray,           // Spine Surgeries
   9: polytraumaXray,      // Polytrauma Management
   10: pelvicXray,         // Pelvic Fixation
@@ -31,6 +38,7 @@ const xrayImages = {
   13: geriatricImg,       // Geriatric Trauma Care
   14: softTissueImg,      // Soft Tissue Reconstruction
   15: tendonTransferImg,  // Tendon Transfer
+  16: revisionAfter,      // Comprehensive Revision Surgeries (After)
 }
 
 export default function Achievements() {
