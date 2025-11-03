@@ -3491,7 +3491,7 @@ body {
   padding: 36px 32px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   touch-action: pan-y;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -3504,9 +3504,10 @@ body {
 
 /* Disable hover effects on touch devices for smoother scrolling */
 @media (hover: hover) and (pointer: fine) {
-.mission-vision-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  .mission-vision-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(42, 91, 108, 0.12);
+    border-color: rgba(42, 91, 108, 0.2);
   }
 }
 
@@ -3582,13 +3583,14 @@ body {
   padding-top: 40px;
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   touch-action: pan-y;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: auto;
   position: relative;
   overflow: visible;
+  border: 1px solid rgba(42, 91, 108, 0.06);
 }
 
 .value-card:hover {
@@ -3598,10 +3600,10 @@ body {
 
 /* Disable hover effects on touch devices for smoother scrolling */
 @media (hover: hover) and (pointer: fine) {
-.value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--brand);
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(42, 91, 108, 0.12);
+    border-color: rgba(42, 91, 108, 0.15);
   }
 }
 
@@ -3647,6 +3649,22 @@ body {
   touch-action: pan-y;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(42, 91, 108, 0.08);
+}
+
+/* Disable hover effects on touch devices for smoother scrolling */
+@media (hover: hover) and (pointer: fine) {
+  .leader-spotlight:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(42, 91, 108, 0.15);
+    border-color: rgba(42, 91, 108, 0.15);
+  }
+  
+  .leader-spotlight:hover .leader-spotlight-avatar {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 122, 204, 0.4);
+  }
 }
 
 .leader-spotlight-avatar {
@@ -3660,6 +3678,7 @@ body {
   box-shadow: 0 8px 24px rgba(0, 122, 204, 0.3);
   overflow: hidden;
   position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .director-profile-img {
