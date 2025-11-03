@@ -3682,8 +3682,8 @@ body {
 }
 
 .director-profile-img {
-  object-position: center top !important;
-  transform: scale(1.4) !important;
+  object-position: center -10% !important;
+  transform: scale(1.35) !important;
 }
 
 .leader-spotlight-initials {
