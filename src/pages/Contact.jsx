@@ -68,87 +68,98 @@ export default function Contact() {
         </div>
       </FadeIn>
 
-      {/* Contact Info Cards - Redesigned as clickable buttons */}
+      {/* Contact Info Cards - Icon-as-Button Design */}
       <StaggerContainer className="contact-info-grid">
         <a 
           href="https://www.google.com/maps/dir//14.916762299999998,79.9951669/@14.916762299999998,79.9951669,17z" 
           target="_blank" 
           rel="noreferrer" 
-          className="contact-info-card contact-info-card-clickable"
+          className="contact-card-modern contact-card-interactive"
         >
-          <div className="contact-info-badge">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
+          <div className="contact-card-icon-button">
+            <div className="icon-button-circle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div className="icon-button-glow"></div>
           </div>
-          <h3>{t.contact.address}</h3>
-          <div className="contact-info-details">
+          <h3 className="contact-card-title">{t.contact.address}</h3>
+          <div className="contact-card-content">
             <p>{t.contact.addressLine1}</p>
             <p>{t.contact.addressLine2}</p>
             <p>{t.contact.addressLine3}</p>
           </div>
-          <button className="contact-action-btn">
-            {t.contact.viewMaps}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <div className="contact-card-action">
+            <span>{t.contact.viewMaps}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </button>
+          </div>
         </a>
 
         <a 
           href="tel:+919912757854" 
-          className="contact-info-card contact-info-card-clickable"
+          className="contact-card-modern contact-card-interactive"
         >
-          <div className="contact-info-badge">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
+          <div className="contact-card-icon-button">
+            <div className="icon-button-circle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div className="icon-button-glow"></div>
           </div>
-          <h3>{t.contact.phone}</h3>
-          <div className="contact-info-details">
-            <p className="contact-phone-number">+91 9912757854</p>
-            <p className="contact-note">Please note that we do not take appointments beforehand.</p>
+          <h3 className="contact-card-title">{t.contact.phone}</h3>
+          <div className="contact-card-content">
+            <p className="contact-highlight-text">+91 9912757854</p>
+            <p className="contact-note-text">Please note that we do not take appointments beforehand.</p>
           </div>
-          <button className="contact-action-btn">
-            Call Now
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <div className="contact-card-action">
+            <span>Call Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </button>
+          </div>
         </a>
 
         <a 
           href="mailto:ramaswamyhospitals@gmail.com" 
-          className="contact-info-card contact-info-card-clickable"
+          className="contact-card-modern contact-card-interactive"
         >
-          <div className="contact-info-badge">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
+          <div className="contact-card-icon-button">
+            <div className="icon-button-circle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div className="icon-button-glow"></div>
           </div>
-          <h3>{t.contact.email}</h3>
-          <div className="contact-info-details">
-            <p className="contact-email-address">ramaswamyhospitals@gmail.com</p>
+          <h3 className="contact-card-title">{t.contact.email}</h3>
+          <div className="contact-card-content">
+            <p className="contact-highlight-text">ramaswamyhospitals@gmail.com</p>
           </div>
-          <button className="contact-action-btn">
-            Send Email
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <div className="contact-card-action">
+            <span>Send Email</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </button>
+          </div>
         </a>
 
-        <div className="contact-info-card">
-          <div className="contact-info-badge">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
+        <div className="contact-card-modern">
+          <div className="contact-card-icon-button">
+            <div className="icon-button-circle icon-static">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
           </div>
-          <h3>{t.contact.hours}</h3>
-          <div className="contact-info-details">
+          <h3 className="contact-card-title">{t.contact.hours}</h3>
+          <div className="contact-card-content">
             <div className="contact-hours-item">
               <strong>{t.contact.emergencyHours}</strong>
             </div>

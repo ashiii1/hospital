@@ -4434,66 +4434,235 @@ body {
   margin-top: 48px;
 }
 
-.contact-info-card {
+/* Modern Contact Cards - Icon-as-Button Design */
+.contact-card-modern {
   background: var(--white);
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  padding: 40px 32px 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.contact-info-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--brand);
+/* Hover effect with lift and glow */
+.contact-card-modern:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 122, 204, 0.15);
+  border-color: rgba(0, 122, 204, 0.2);
 }
 
-/* Clickable card styles */
-.contact-info-card-clickable {
+/* Interactive cards (clickable) */
+.contact-card-interactive {
   text-decoration: none;
   cursor: pointer;
-  background: linear-gradient(to bottom, var(--white), #f8fbff);
 }
 
-.contact-info-card-clickable:hover {
-  background: linear-gradient(to bottom, #f8fbff, #f0f7ff);
-}
-
-.contact-info-card-clickable::before {
+.contact-card-interactive::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--brand), var(--brand-light));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--brand), transparent);
+  border-radius: 0 0 3px 3px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-info-card-clickable:hover::before {
-  transform: scaleX(1);
+.contact-card-interactive:hover::before {
+  transform: translateX(-50%) scaleX(1);
 }
 
-/* Badge instead of large icon */
-.contact-info-badge {
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-light));
-  border-radius: 12px;
+/* Icon Button Circle - The Star of the Show */
+.contact-card-icon-button {
+  position: relative;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.25);
 }
 
+.icon-button-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 122, 204, 0.3);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated glow effect */
+.icon-button-glow {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 122, 204, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Hover animations for interactive cards */
+.contact-card-interactive:hover .icon-button-circle {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(0, 122, 204, 0.4);
+}
+
+.contact-card-interactive:hover .icon-button-glow {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+.contact-card-interactive:active .icon-button-circle {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Pulse animation for icon */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.contact-card-interactive:hover .icon-button-circle svg {
+  animation: iconPulse 1.5s ease-in-out infinite;
+}
+
+/* Static icon (non-interactive) */
+.icon-static {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  box-shadow: 0 8px 24px rgba(108, 117, 125, 0.3);
+}
+
+/* Card Title */
+.contact-card-title {
+  color: var(--brand);
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.contact-card-interactive:hover .contact-card-title {
+  color: var(--brand-dark);
+}
+
+/* Card Content */
+.contact-card-content {
+  flex: 1;
+  margin: 0 0 24px 0;
+  width: 100%;
+}
+
+.contact-card-content p {
+  margin: 6px 0;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.contact-highlight-text {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: var(--brand) !important;
+  margin: 12px 0 !important;
+  word-break: break-word;
+}
+
+.contact-note-text {
+  font-size: 0.85rem !important;
+  color: #6c757d !important;
+  font-style: italic;
+  margin-top: 12px !important;
+}
+
+/* Action indicator at bottom */
+.contact-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.contact-card-action::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card-interactive:hover .contact-card-action {
+  gap: 12px;
+}
+
+.contact-card-interactive:hover .contact-card-action::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.contact-card-action svg {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card-interactive:hover .contact-card-action svg {
+  transform: translateX(4px);
+}
+
+/* Ripple effect on click */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.contact-card-interactive:active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 122, 204, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s ease-out;
+}
+
+/* Legacy styles for backward compatibility */
 .contact-info-icon {
   width: 64px;
   height: 64px;
@@ -4505,72 +4674,6 @@ body {
   margin-bottom: 20px;
   color: white;
   box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
-}
-
-/* Details section */
-.contact-info-details {
-  flex: 1;
-  margin: 12px 0 24px 0;
-}
-
-.contact-info-details p {
-  margin: 4px 0;
-  color: var(--text);
-  line-height: 1.6;
-}
-
-.contact-info-details .contact-phone-number {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--brand);
-  margin: 8px 0 12px 0;
-}
-
-.contact-info-details .contact-email-address {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--brand);
-  word-break: break-word;
-  margin: 8px 0;
-}
-
-.contact-info-details .contact-note {
-  font-size: 0.9rem;
-  color: #666;
-  font-style: italic;
-  margin-top: 8px;
-}
-
-/* Action button */
-.contact-action-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: var(--brand);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  align-self: flex-start;
-  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
-}
-
-.contact-action-btn:hover {
-  background: var(--brand-dark);
-  transform: translateX(4px);
-  box-shadow: 0 6px 16px rgba(0, 122, 204, 0.4);
-}
-
-.contact-action-btn svg {
-  transition: transform 0.2s ease;
-}
-
-.contact-action-btn:hover svg {
-  transform: translateX(4px);
 }
 
 .contact-info-card h3 {
