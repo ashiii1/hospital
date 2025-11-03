@@ -3,7 +3,7 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
-import { ChevronDown, HelpCircle } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export default function Testimonials() {
   const { t } = useI18n()
@@ -119,24 +119,24 @@ export default function Testimonials() {
   // FAQ Data
   const faqs = [
     {
-      question: "What specialties are available at Dr. Ramaswamy Hospitals?",
-      answer: "We offer a wide range of specialties including Orthopedics, General Medicine, General Surgery, Urology, Nephrology. Our multi-speciality setup ensures that patients receive comprehensive and coordinated care under one roof."
+      question: t.testimonials.faq1Question,
+      answer: t.testimonials.faq1Answer
     },
     {
-      question: "Do you offer emergency and 24/7 services?",
-      answer: "Yes, our hospital provides round-the-clock emergency services, supported by an experienced team of doctors, nurses, and technicians."
+      question: t.testimonials.faq2Question,
+      answer: t.testimonials.faq2Answer
     },
     {
-      question: "How can I book an appointment with a doctor?",
-      answer: "Appointments cannot be booked before hand. We do not book appointment. We offer First in First out of patients."
+      question: t.testimonials.faq3Question,
+      answer: t.testimonials.faq3Answer
     },
     {
-      question: "Do you provide cashless treatment or insurance support?",
-      answer: "Yes, we are empanelled with insurance providers and government health schemes. Our billing team assists patients in processing insurance claims and cashless treatment approvals smoothly."
+      question: t.testimonials.faq4Question,
+      answer: t.testimonials.faq4Answer
     },
     {
-      question: "Is there a pharmacy inside the hospital?",
-      answer: "Yes, our in-house pharmacy operates 24/7, ensuring patients and their families can easily access prescribed medicines without delay."
+      question: t.testimonials.faq5Question,
+      answer: t.testimonials.faq5Answer
     }
   ]
 
@@ -272,10 +272,9 @@ export default function Testimonials() {
       <FadeIn>
         <div style={{ marginTop: 80 }}>
           <div className="faq-section-header">
-            <HelpCircle className="faq-icon" size={32} />
-            <h2 className="faq-section-title">Frequently Asked Questions</h2>
+            <h2 className="faq-section-title">{t.testimonials.faqTitle}</h2>
             <p className="faq-section-subtitle">
-              Find answers to common questions about our services and facilities
+              {t.testimonials.faqSubtitle}
             </p>
           </div>
 

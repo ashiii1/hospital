@@ -214,7 +214,20 @@ export const translations = {
       patient5Location: 'Atmakur',
       patient6Name: 'Anitha Reddy',
       patient6Quote: 'From consultation to recovery, every step was handled professionally. Highly recommend this hospital to everyone.',
-      patient6Location: 'Kavali'
+      patient6Location: 'Kavali',
+      // FAQ Section
+      faqTitle: 'Frequently Asked Questions',
+      faqSubtitle: 'Find answers to common questions about our services and facilities',
+      faq1Question: 'What specialties are available at Dr. Ramaswamy Hospitals?',
+      faq1Answer: 'We offer a wide range of specialties including Orthopedics, General Medicine, General Surgery, Urology, Nephrology. Our multi-speciality setup ensures that patients receive comprehensive and coordinated care under one roof.',
+      faq2Question: 'Do you offer emergency and 24/7 services?',
+      faq2Answer: 'Yes, our hospital provides round-the-clock emergency services, supported by an experienced team of doctors, nurses, and technicians.',
+      faq3Question: 'How can I book an appointment with a doctor?',
+      faq3Answer: 'Appointments cannot be booked before hand. We do not book appointment. We offer First in First out of patients.',
+      faq4Question: 'Do you provide cashless treatment or insurance support?',
+      faq4Answer: 'Yes, we are empanelled with insurance providers and government health schemes. Our billing team assists patients in processing insurance claims and cashless treatment approvals smoothly.',
+      faq5Question: 'Is there a pharmacy inside the hospital?',
+      faq5Answer: 'Yes, our in-house pharmacy operates 24/7, ensuring patients and their families can easily access prescribed medicines without delay.'
     },
     achievements: {
       // Hero Section
@@ -701,7 +714,20 @@ export const translations = {
       patient5Location: 'ఆత్మకూరు',
       patient6Name: 'అనిత రెడ్డి',
       patient6Quote: 'సంప్రదింపు నుండి కోలుకునే వరకు, ప్రతి దశ వృత్తిపరంగా నిర్వహించబడింది. ఈ ఆసుపత్రిని అందరికీ గట్టిగా సిఫార్సు చేస్తాను.',
-      patient6Location: 'కావలి'
+      patient6Location: 'కావలి',
+      // FAQ Section
+      faqTitle: 'తరచుగా అడిగే ప్రశ్నలు',
+      faqSubtitle: 'మా సేవలు మరియు సౌకర్యాల గురించి సాధారణ ప్రశ్నలకు సమాధానాలు కనుగొనండి',
+      faq1Question: 'డాక్టర్. రామస్వామి హాస్పిటల్స్‌లో ఏ ప్రత్యేకతలు లభిస్తాయి?',
+      faq1Answer: 'మేము ఆర్థోపెడిక్స్, జనరల్ మెడిసిన్, జనరల్ సర్జరీ, యూరాలజీ, నెఫ్రాలజీతో సహా విస్తృతమైన ప్రత్యేకతలను అందిస్తాము. మా బహుళ-ప్రత్యేకత సెటప్ రోగులు ఒకే పైకప్పు క్రింద సమగ్ర మరియు సమన్వయ సంరక్షణను పొందేలా నిర్ధారిస్తుంది.',
+      faq2Question: 'మీరు అత్యవసర మరియు 24/7 సేవలను అందిస్తారా?',
+      faq2Answer: 'అవును, మా ఆసుపత్రి అనుభవజ్ఞులైన వైద్యులు, నర్సులు మరియు టెక్నీషియన్ల బృందంతో రోజూ-రాత్రి అత్యవసర సేవలను అందిస్తుంది.',
+      faq3Question: 'నేను వైద్యుడితో ఎలా నియామకాన్ని బుక్ చేయగలను?',
+      faq3Answer: 'ముందుగా నియామకాలను బుక్ చేయలేము. మేము నియామకాన్ని బుక్ చేయము. మేము రోగులకు మొదటిది మొదటిది అవుట్ అందిస్తాము.',
+      faq4Question: 'మీరు నగదు లేని చికిత్స లేదా విమా మద్దతును అందిస్తారా?',
+      faq4Answer: 'అవును, మేము విమా ప్రదాతలు మరియు ప్రభుత్వ ఆరోగ్య పథకాలతో ఎంపానెల్ చేయబడ్డాము. మా బిల్లింగ్ బృందం విమా దావాలను మరియు నగదు లేని చికిత్స ఆమోదాలను సున్నితంగా ప్రాసెస్ చేయడంలో రోగులకు సహాయపడుతుంది.',
+      faq5Question: 'ఆసుపత్రి లోపల ఫార్మసీ ఉందా?',
+      faq5Answer: 'అవును, మా ఇన్-హౌస్ ఫార్మసీ 24/7 పనిచేస్తుంది, రోగులు మరియు వారి కుటుంబాలు ఆలస్యం లేకుండా ఎత్తివేయబడిన మందులను సులభంగా యాక్సెస్ చేయగలుగుతాయి.'
     },
     achievements: {
       // Hero Section
