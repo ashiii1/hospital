@@ -38,3 +38,4 @@ Place the optimized X-ray images in this folder with the following names:
 
 Save X-rays here and they will automatically appear in achievement cards!
 
+

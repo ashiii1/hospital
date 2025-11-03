@@ -102,7 +102,9 @@ export default function Home() {
           })
           .catch((error) => {
             // Auto-play was prevented, try to play on user interaction
-            console.log('Video autoplay prevented:', error)
+            if (import.meta.env.DEV) {
+              console.log('Video autoplay prevented:', error)
+            }
           })
       }
     }

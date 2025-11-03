@@ -37,31 +37,30 @@ const router = createBrowserRouter([
   },
 ])
 
-// Add error boundary
-console.log('Main.jsx is loading...')
+// Initialize app
 const root = document.getElementById('root')
-console.log('Root element:', root)
 if (!root) {
-  console.error('Root element not found!')
   document.body.innerHTML = '<div style="padding: 20px; color: red;">Error: Root element not found</div>'
-} else {
-  console.log('Starting React app...')
-  try {
-    createRoot(root).render(
-      <StrictMode>
-        <ErrorBoundary>
-          <I18nProvider>
-            <ToastProvider>
-              <Suspense fallback={<LoadingScreen />}>
-                <RouterProvider router={router} />
-              </Suspense>
-            </ToastProvider>
-          </I18nProvider>
-        </ErrorBoundary>
-      </StrictMode>,
-    )
-  } catch (error) {
+  throw new Error('Root element not found!')
+}
+
+try {
+  createRoot(root).render(
+    <StrictMode>
+      <ErrorBoundary>
+        <I18nProvider>
+          <ToastProvider>
+            <Suspense fallback={<LoadingScreen />}>
+              <RouterProvider router={router} />
+            </Suspense>
+          </ToastProvider>
+        </I18nProvider>
+      </ErrorBoundary>
+    </StrictMode>,
+  )
+} catch (error) {
+  if (import.meta.env.DEV) {
     console.error('Error rendering app:', error)
-    root.innerHTML = '<div style="padding: 20px; color: red;">Error loading app. Check console for details.</div>'
   }
+  root.innerHTML = '<div style="padding: 20px; color: red;">Error loading app. Check console for details.</div>'
 }

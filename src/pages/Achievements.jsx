@@ -168,16 +168,12 @@ export default function Achievements() {
 
   // Handle card flip on mobile - improved to work reliably
   const handleCardClick = (cardId, event) => {
-    console.log('Card clicked, target:', event.target)
-    console.log('Target classes:', event.target.className)
-    
     // Don't flip card if clicking on the "View Image" button or its wrapper
     if (event && (
       event.target.closest('.view-xray-button') || 
       event.target.classList.contains('view-xray-button') ||
       event.target.closest('button')
     )) {
-      console.log('Clicked on button area, not flipping card')
       return
     }
     
