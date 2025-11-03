@@ -3039,7 +3039,10 @@ body {
 }
 
 .faq-item-open .faq-question-text {
-  color: var(--brand);
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 700;
 }
 
@@ -3070,24 +3073,30 @@ body {
   transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
   padding: 0 32px;
   opacity: 0;
+  background: transparent;
 }
 
 .faq-answer-open {
   max-height: 500px;
   padding: 0 32px 28px 32px;
   opacity: 1;
+  background: linear-gradient(180deg, rgba(42, 91, 108, 0.02) 0%, rgba(42, 91, 108, 0.05) 100%);
+  border-top: 1px solid rgba(42, 91, 108, 0.08);
+  margin-top: 8px;
 }
 
 .faq-answer-content {
   padding-left: 74px;
-  padding-top: 12px;
+  padding-top: 20px;
+  padding-right: 24px;
   font-size: 1.1rem;
-  line-height: 1.85;
-  color: var(--text);
+  line-height: 1.9;
+  color: #4a5568;
   position: relative;
   overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-weight: 400;
 }
 
 .faq-answer-content::-webkit-scrollbar {
@@ -3137,8 +3146,9 @@ body {
 
   .faq-answer-content {
     padding-left: 56px;
+    padding-top: 16px;
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .faq-answer-content::before {
