@@ -7,7 +7,6 @@ import bannerLogo from './assets/banner-logo-new.jpeg'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
-import ScrollProgress from './components/ScrollProgress.jsx'
 import PageTransition from './components/PageTransition.jsx'
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
   
   return (
     <div className={`app ${mobileOpen ? 'mobile-open' : ''}`}>
-      <ScrollProgress />
       <ScrollToTop />
       <LanguageModal onSelectLanguage={setLang} />
       <a href="#main-content" className="skip-link">Skip to main content</a>
