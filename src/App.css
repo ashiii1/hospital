@@ -3684,6 +3684,7 @@ body {
 .director-profile-img {
   object-position: center center;
   object-fit: cover;
+  transform: scale(1.15);
 }
 
 .leader-spotlight-initials {
