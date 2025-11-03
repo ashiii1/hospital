@@ -4,7 +4,7 @@ import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
 import PhotoGallery from '../components/PhotoGallery'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg?format=webp&w=400&quality=80'
-import directorImage from '../assets/profile pic new.jpeg?format=webp&w=600&quality=80'
+import directorImage from '../assets/profile pic.jpeg?format=webp&w=600&quality=80'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg?format=webp&w=450&quality=80'
 
 // Import all facility images - optimized for gallery display (WebP only)
