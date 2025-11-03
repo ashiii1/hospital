@@ -3136,23 +3136,31 @@ body {
     font-size: 1.05rem;
   }
 
+  .faq-item-open .faq-question-text {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+
   .faq-answer {
     padding: 0 20px;
   }
 
   .faq-answer-open {
-    padding: 0 20px 20px 20px;
+    max-height: 800px;
+    padding: 0 20px 24px 20px;
+    margin-top: 8px;
   }
 
   .faq-answer-content {
     padding-left: 56px;
     padding-top: 16px;
+    padding-right: 12px;
+    padding-bottom: 8px;
     font-size: 1rem;
     line-height: 1.8;
-  }
-
-  .faq-answer-content::before {
-    left: 56px;
   }
 
   .faq-chevron {
