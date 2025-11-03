@@ -5080,6 +5080,7 @@ body {
   height: 500px;
   border: none;
   display: block;
+  min-height: 300px;
 }
 
 .contact-map-overlay {
@@ -7990,19 +7991,29 @@ body {
     border-radius: 16px;
     margin: 24px 16px 0;
     border-width: 2px;
+    width: calc(100% - 32px);
+    max-width: none;
   }
 
   .contact-map-iframe {
     height: 350px;
+    min-height: 300px;
+    width: 100%;
   }
 
   .contact-map-overlay {
     bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 280px;
   }
 
   .contact-map-overlay .btn {
     padding: 10px 20px;
     font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .contact-social-grid {

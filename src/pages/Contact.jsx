@@ -183,8 +183,6 @@ export default function Contact() {
           <div className="contact-map-container">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.365608313749!2d79.99258227511231!3d14.916710635607961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7b00746144d3%3A0xcf848a03971ed931!2sRamaswamy%20hospitals!5e0!3m2!1sen!2sin!4v1762184843111!5m2!1sen!2sin" 
-              width="600" 
-              height="450" 
               style={{border:0}} 
               allowFullScreen="" 
               loading="lazy" 
