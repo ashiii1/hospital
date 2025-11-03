@@ -3682,7 +3682,7 @@ body {
 }
 
 .director-profile-img {
-  object-position: center 30% !important;
+  object-position: 70% 30% !important;
   transform: scale(1.25) !important;
 }
 
