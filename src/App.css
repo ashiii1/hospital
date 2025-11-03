@@ -3685,6 +3685,7 @@ body {
   object-position: center center;
   object-fit: cover;
   transform: scale(1.15);
+  filter: brightness(1.15);
 }
 
 .leader-spotlight-initials {
