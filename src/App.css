@@ -62,6 +62,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: visible;
   min-height: 50px;
+  width: 100%;
 }
 
 .topbar-content {
@@ -77,6 +78,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   box-sizing: border-box;
   flex-wrap: wrap;
   gap: 8px;
+  width: 100%;
 }
 
 .topbar-left {
@@ -271,6 +273,8 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   justify-content: space-between;
   padding: 16px 32px;
   flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .brand { 
@@ -7310,6 +7314,8 @@ body {
     padding: 7px 16px;
     font-size: 0.75rem;
     gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .topbar-location {
@@ -7343,6 +7349,8 @@ body {
     max-width: 100%;
     padding: 14px 20px;
     gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand-banner-logo {
@@ -7382,6 +7390,9 @@ body {
     font-size: 0.75rem;
     flex-wrap: nowrap;
     overflow-x: auto;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .topbar-left {
@@ -7471,6 +7482,9 @@ body {
   .header-content {
     padding: 12px 20px;
     gap: 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .brand-banner-logo {
@@ -7537,6 +7551,9 @@ body {
   .header-content {
     padding: 10px 12px;
     gap: 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand-banner-logo {
@@ -7584,6 +7601,9 @@ body {
   .header-content {
     padding: 12px 16px;
     gap: 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand-banner-logo {
@@ -7642,6 +7662,9 @@ body {
   .header-content {
     padding: 10px 12px;
     gap: 12px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand-banner-logo {
@@ -7707,6 +7730,9 @@ body {
 
   .header-content {
     padding: 12px 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand {
