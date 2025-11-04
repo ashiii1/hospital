@@ -287,6 +287,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   text-decoration: none;
   transition: all 0.3s ease;
   flex-shrink: 1;
+  min-width: 0;
   cursor: pointer;
 }
 
@@ -299,6 +300,8 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
+  flex-shrink: 1;
+  max-width: 200px;
 }
 
 .brand:hover .brand-banner-logo {
@@ -332,6 +335,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   align-items: center; 
   flex-wrap: nowrap; 
   flex-shrink: 0;
+  min-width: 0;
 }
 .nav a { 
   color: var(--text); 
@@ -343,6 +347,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   cursor: pointer;
   position: relative;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .nav a:hover { 
   background: var(--sand); 
@@ -7355,15 +7360,18 @@ body {
 
   .brand-banner-logo {
     height: 56px;
+    max-width: 180px;
   }
 
   .nav {
     gap: 10px;
+    flex-shrink: 1;
   }
 
   .nav a {
     font-size: 0.88rem;
     padding: 8px 12px;
+    flex-shrink: 0;
   }
 }
 
@@ -7608,15 +7616,18 @@ body {
 
   .brand-banner-logo {
     height: 52px;
+    max-width: 170px;
   }
 
   .nav {
     gap: 8px;
+    flex-shrink: 1;
   }
 
   .nav a {
     font-size: 0.84rem;
     padding: 8px 10px;
+    flex-shrink: 0;
   }
 }
 
@@ -7669,15 +7680,18 @@ body {
 
   .brand-banner-logo {
     height: 48px;
+    max-width: 150px;
   }
 
   .nav {
     gap: 6px;
+    flex-shrink: 1;
   }
 
   .nav a {
     font-size: 0.8rem;
     padding: 7px 9px;
+    flex-shrink: 0;
   }
 }
 
