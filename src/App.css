@@ -5920,6 +5920,107 @@ body {
   opacity: 1;
 }
 
+/* Learn More Button Container */
+.home-learn-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  padding: 0 32px;
+}
+
+.home-learn-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(42, 91, 108, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.home-learn-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.home-learn-more-btn:hover::before {
+  left: 100%;
+}
+
+.home-learn-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(42, 91, 108, 0.35);
+  background: linear-gradient(135deg, var(--brand-light) 0%, var(--brand) 100%);
+}
+
+.home-learn-more-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(42, 91, 108, 0.25);
+}
+
+.home-learn-more-btn svg {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.home-learn-more-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .home-learn-more-container {
+    margin-top: 32px;
+    padding: 0 16px;
+  }
+
+  .home-learn-more-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .home-learn-more-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-learn-more-container {
+    margin-top: 24px;
+    padding: 0 12px;
+  }
+
+  .home-learn-more-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+
+  .home-learn-more-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .home-feature-number {
   width: 52px;
   height: 52px;
