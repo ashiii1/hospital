@@ -7476,7 +7476,7 @@ body {
   .nav {
     display: flex !important;
     gap: 6px;
-    flex-shrink: 1;
+    flex-shrink: 0; /* Changed to prevent nav compression */
   }
   
   .nav a {
