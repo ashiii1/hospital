@@ -7357,6 +7357,7 @@ body {
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between; /* Added to match base styles */
   }
 
   .brand-banner-logo {
@@ -7496,6 +7497,7 @@ body {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between; /* Added to match base styles */
   }
   
   .brand-banner-logo {
@@ -7618,6 +7620,7 @@ body {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between; /* Added to match base styles */
   }
 
   .brand-banner-logo {
@@ -7682,6 +7685,7 @@ body {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between; /* Added to match base styles */
   }
 
   .brand-banner-logo {
