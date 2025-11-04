@@ -183,7 +183,7 @@ export const translations = {
     },
     testimonials: {
       title: 'Patient Testimonials',
-      subtitle: 'Hear what our patients have to say about their experiences at our hospital.',
+      subtitle: 'Hear what our patients have to say about their experiences at our hospital. Also explore our FAQ section for answers to common questions.',
       happyPatients: 'Happy Patients',
       averageRating: 'Average Rating',
       satisfactionRate: 'Satisfaction Rate',
@@ -683,7 +683,7 @@ export const translations = {
     },
     testimonials: {
       title: 'రోగుల ప్రశంసలు',
-      subtitle: 'మా ఆసుపత్రిలో చికిత్స పొందిన రోగుల అనుభవాలను వినండి. వారి అభిప్రాయాలు మాకు చాలా విలువైనవి.',
+      subtitle: 'మా ఆసుపత్రిలో చికిత్స పొందిన రోగుల అనుభవాలను వినండి. సాధారణ ప్రశ్నలకు సమాధానాల కోసం మా FAQ విభాగాన్ని కూడా అన్వేషించండి.',
       happyPatients: 'సంతోషకరమైన రోగులు',
       averageRating: 'సగటు రేటింగ్',
       satisfactionRate: 'సంతృప్తి రేటు',

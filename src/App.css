@@ -5975,6 +5975,67 @@ body {
   }
 }
 
+/* Small Desktop/Laptop (1025px - 1366px) - HP Probook, etc */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .home-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+  }
+
+  .home-feature-card {
+    padding: 26px;
+  }
+
+  .home-feature-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .home-feature-card p {
+    font-size: 0.95rem;
+  }
+
+  .home-feature-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.15rem;
+  }
+}
+
+/* Medium Desktop (1367px - 1600px) */
+@media (min-width: 1367px) and (max-width: 1600px) {
+  .home-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+  }
+
+  .home-feature-card {
+    padding: 28px;
+  }
+}
+
+/* Large Desktop (above 1600px) */
+@media (min-width: 1601px) {
+  .home-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+  }
+
+  .home-feature-card {
+    padding: 32px;
+  }
+
+  .home-feature-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .home-feature-card p {
+    font-size: 1.05rem;
+  }
+}
+
 /* Floating WhatsApp Button */
 .floating-whatsapp {
   position: fixed !important;
