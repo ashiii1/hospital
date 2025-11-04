@@ -274,7 +274,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   flex-wrap: nowrap;
   width: 100%;
   box-sizing: border-box;
-  justify-content: flex-start; /* Changed to flex-start so items flow naturally */
+  justify-content: space-between; /* Restored to match About/Services/Testimonials pages */
 }
 
 .brand { 
@@ -289,6 +289,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   flex-shrink: 1;
   min-width: 0;
   cursor: pointer;
+  margin-right: auto; /* Restored to match About/Services/Testimonials pages */
 }
 
 .brand:hover {
@@ -301,7 +302,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   object-fit: contain;
   transition: all 0.3s ease;
   flex-shrink: 1;
-  max-width: 180px; /* Reduced from 200px to bring nav items closer */
+  max-width: 200px; /* Restored to match About/Services/Testimonials pages */
 }
 
 .brand:hover .brand-banner-logo {
