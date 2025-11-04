@@ -86,26 +86,53 @@ export default function Home() {
     return () => clearInterval(testimonialTimer)
   }, [])
 
-  // Force video to play on mount
+  // Force video to play on mount and ensure it stays playing
   useEffect(() => {
     const video = videoRef.current
     if (video) {
-      // Reset and play video
-      video.load()
-      const playPromise = video.play()
+      // Set video properties
+      video.muted = true
+      video.loop = true
+      video.playsInline = true
       
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            // Video is playing
-            setVideoLoaded(true)
-          })
-          .catch((error) => {
-            // Auto-play was prevented, try to play on user interaction
-            if (import.meta.env.DEV) {
-              console.log('Video autoplay prevented:', error)
-            }
-          })
+      // Load and play video
+      video.load()
+      
+      const playVideo = async () => {
+        try {
+          await video.play()
+          setVideoLoaded(true)
+        } catch (error) {
+          // Auto-play was prevented, try again after user interaction
+          if (import.meta.env.DEV) {
+            console.log('Video autoplay prevented, will retry:', error)
+          }
+          
+          // Retry play on first user interaction
+          const handleInteraction = () => {
+            video.play().catch(() => {})
+            document.removeEventListener('click', handleInteraction)
+            document.removeEventListener('touchstart', handleInteraction)
+          }
+          
+          document.addEventListener('click', handleInteraction, { once: true })
+          document.addEventListener('touchstart', handleInteraction, { once: true })
+        }
+      }
+      
+      playVideo()
+      
+      // Ensure video stays playing if paused
+      const checkPlaying = () => {
+        if (video.paused && video.readyState >= 2) {
+          video.play().catch(() => {})
+        }
+      }
+      
+      const intervalId = setInterval(checkPlaying, 1000)
+      
+      return () => {
+        clearInterval(intervalId)
       }
     }
   }, [])
@@ -223,8 +250,22 @@ export default function Home() {
             playsInline
             className="hero-video"
             preload="auto"
-            onLoadedData={() => setVideoLoaded(true)}
-            onCanPlay={() => setVideoLoaded(true)}
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
+            onLoadedData={() => {
+              setVideoLoaded(true)
+              const video = videoRef.current
+              if (video && video.paused) {
+                video.play().catch(() => {})
+              }
+            }}
+            onCanPlay={() => {
+              setVideoLoaded(true)
+              const video = videoRef.current
+              if (video && video.paused) {
+                video.play().catch(() => {})
+              }
+            }}
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
@@ -338,6 +379,18 @@ export default function Home() {
             </div>
           ))}
         </StaggerContainer>
+        
+        {/* Learn More Button */}
+        <FadeIn>
+          <div className="home-learn-more-container">
+            <Link to="/about" className="home-learn-more-btn" onClick={() => window.scrollTo(0, 0)}>
+              <span>{t.home.learnMoreAbout}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </Link>
+          </div>
+        </FadeIn>
       </section>
 
       {/* Quick Services Preview */}

@@ -110,7 +110,8 @@ export const translations = {
       testimonial3Quote: 'Life-changing surgery experience. The post-operative care was exceptional and recovery was smooth.',
       testimonial3Name: 'Anitha Reddy',
       testimonial3Location: 'Kavali',
-      testimonialsCTA: 'Read More Reviews'
+      testimonialsCTA: 'Read More Reviews',
+      learnMoreAbout: 'Learn More About Us'
     },
     about: {
       title: 'About Us',
@@ -610,7 +611,8 @@ export const translations = {
       testimonial3Quote: 'జీవితాన్ని మార్చే శస్త్రచికిత్స అనుభవం. శస్త్రచికిత్స తర్వాత సంరక్షణ అసాధారణమైనది మరియు కోలుకోవడం సజావుగా జరిగింది.',
       testimonial3Name: 'అనిత రెడ్డి',
       testimonial3Location: 'కావలి',
-      testimonialsCTA: 'మరిన్ని సమీక్షలు చదవండి'
+      testimonialsCTA: 'మరిన్ని సమీక్షలు చదవండి',
+      learnMoreAbout: 'మా గురించి మరింత తెలుసుకోండి'
     },
     about: {
       title: 'మా గురించి',
