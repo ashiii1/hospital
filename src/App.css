@@ -7365,7 +7365,7 @@ body {
 
   .nav {
     gap: 10px;
-    flex-shrink: 1;
+    flex-shrink: 0; /* Changed to prevent nav compression */
   }
 
   .nav a {
@@ -7569,10 +7569,12 @@ body {
 
   .brand-banner-logo {
     height: 55px;
+    max-width: 150px; /* Added to prevent overflow */
   }
 
   .nav {
     gap: 8px;
+    flex-shrink: 0; /* Changed from default to prevent nav compression */
   }
 
   .nav a {
@@ -7624,7 +7626,7 @@ body {
 
   .nav {
     gap: 8px;
-    flex-shrink: 1;
+    flex-shrink: 0; /* Changed to prevent nav compression */
   }
 
   .nav a {
@@ -7688,7 +7690,7 @@ body {
 
   .nav {
     gap: 6px;
-    flex-shrink: 1;
+    flex-shrink: 0; /* Changed to prevent nav compression */
   }
 
   .nav a {
