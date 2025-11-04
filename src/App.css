@@ -7497,6 +7497,7 @@ body {
   
   .brand-banner-logo {
     height: 48px;
+    max-width: 160px;
   }
   
   .main {
