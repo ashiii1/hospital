@@ -3706,9 +3706,9 @@ body {
 }
 
 .rakshana-profile-img {
-  object-position: center center;
+  object-position: center top;
   object-fit: cover;
-  transform: none;
+  transform: scale(1.3);
   filter: none;
 }
 
