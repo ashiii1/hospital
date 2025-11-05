@@ -3721,7 +3721,16 @@ body {
   color: var(--accent);
   font-size: 1.1rem;
   font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.leader-spotlight-qualifications {
+  color: var(--brand);
+  font-size: 0.95rem;
+  font-weight: 500;
   margin-bottom: 16px;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 .leader-spotlight-info p {
@@ -4341,10 +4350,35 @@ body {
   .leader-spotlight {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 32px 24px;
   }
 
   .leader-spotlight-avatar {
     margin: 0 auto;
+    width: 150px;
+    height: 150px;
+  }
+
+  .leader-spotlight-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .leader-spotlight-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .leader-spotlight-qualifications {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .leader-spotlight-info p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .about-stats-container {

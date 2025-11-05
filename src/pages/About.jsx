@@ -203,6 +203,7 @@ export default function About() {
             <div className="leader-spotlight-info">
               <h3>{t.about.founderName}</h3>
               <div className="leader-spotlight-title">{t.about.founderTitle}</div>
+              <div className="leader-spotlight-qualifications">{t.about.founderEducation}</div>
               <p dangerouslySetInnerHTML={{ __html: t.about.founderBio }}></p>
             </div>
           </div>
@@ -216,6 +217,7 @@ export default function About() {
             <div className="leader-spotlight-info">
               <h3>{t.about.directorName}</h3>
               <div className="leader-spotlight-title">{t.about.directorTitle}</div>
+              <div className="leader-spotlight-qualifications">{t.about.directorEducation}</div>
               <p dangerouslySetInnerHTML={{ __html: t.about.directorBio }}></p>
             </div>
           </div>
