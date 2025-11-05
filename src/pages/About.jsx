@@ -5,6 +5,7 @@ import CountUp from '../components/CountUp'
 import PhotoGallery from '../components/PhotoGallery'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg?format=webp&w=400&quality=80'
 import directorImage from '../assets/profile pic.jpeg?format=webp&w=600&quality=80'
+import rakshanaImage from '../assets/rakshana pic.jpeg'
 import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg?format=webp&w=450&quality=80'
 
 // Import all facility images - optimized for gallery display (WebP only)
@@ -219,6 +220,20 @@ export default function About() {
               <div className="leader-spotlight-title">{t.about.directorTitle}</div>
               <div className="leader-spotlight-qualifications">{t.about.directorEducation}</div>
               <p dangerouslySetInnerHTML={{ __html: t.about.directorBio }}></p>
+            </div>
+          </div>
+        </ScaleIn>
+        
+        <ScaleIn>
+          <div className="leader-spotlight" style={{ marginTop: 40 }}>
+            <div className="leader-spotlight-avatar">
+              <img src={rakshanaImage} alt={t.about.rakshanaName} className="rakshana-profile-img" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+            </div>
+            <div className="leader-spotlight-info">
+              <h3>{t.about.rakshanaName}</h3>
+              <div className="leader-spotlight-title">{t.about.rakshanaTitle}</div>
+              <div className="leader-spotlight-qualifications">{t.about.rakshanaEducation}</div>
+              <p dangerouslySetInnerHTML={{ __html: t.about.rakshanaBio }}></p>
             </div>
           </div>
         </ScaleIn>

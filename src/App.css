@@ -3705,6 +3705,13 @@ body {
   filter: brightness(1.15);
 }
 
+.rakshana-profile-img {
+  object-position: center center;
+  object-fit: cover;
+  transform: none;
+  filter: none;
+}
+
 .leader-spotlight-initials {
   font-size: 4rem;
   font-weight: 700;
