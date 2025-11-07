@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
 import PageTransition from './components/PageTransition.jsx'
+import CanonicalTag from './components/CanonicalTag.jsx'
 
 function App() {
   const { t, lang, setLang } = useI18n()
@@ -32,6 +33,7 @@ function App() {
   
   return (
     <div className={`app ${mobileOpen ? 'mobile-open' : ''}`}>
+      <CanonicalTag />
       <ScrollToTop />
       <LanguageModal onSelectLanguage={setLang} />
       <a href="#main-content" className="skip-link">Skip to main content</a>
