@@ -9,30 +9,18 @@ import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
 import PageTransition from './components/PageTransition.jsx'
 import CanonicalTag from './components/CanonicalTag.jsx'
+import SEOMetaTags from './components/SEOMetaTags.jsx'
 
 function App() {
   const { t, lang, setLang } = useI18n()
   const { pathname } = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
   
-  const routeTitle = (() => {
-    if (pathname === '/') return t.nav.home
-    if (pathname.startsWith('/about')) return t.nav.about
-    if (pathname.startsWith('/services')) return t.nav.services
-    if (pathname.startsWith('/doctors')) return t.nav.doctors
-    if (pathname.startsWith('/facilities')) return t.nav.facilities
-    if (pathname.startsWith('/testimonials')) return t.nav.testimonials
-    if (pathname.startsWith('/achievements')) return t.nav.achievements
-    if (pathname.startsWith('/contact')) return t.nav.contact
-    return 'Not Found'
-  })()
-  
-  if (typeof document !== 'undefined') {
-    document.title = 'Dr.Ramaswamy Hospitals | ' + routeTitle
-  }
+  // Title is now handled by SEOMetaTags component for better SEO
   
   return (
     <div className={`app ${mobileOpen ? 'mobile-open' : ''}`}>
+      <SEOMetaTags />
       <CanonicalTag />
       <ScrollToTop />
       <LanguageModal onSelectLanguage={setLang} />
