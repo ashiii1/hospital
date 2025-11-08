@@ -50,14 +50,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   border-width: 0;
 }
 
-.app { 
-  min-height: 100%; 
-  display: grid; 
-  grid-template-rows: auto 1fr auto; 
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
+.app { min-height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
 
 /* ===== TOPBAR REDESIGN ===== */
 .topbar { 
@@ -67,11 +60,9 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   background: linear-gradient(135deg, var(--brand-dark), var(--brand));
   color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: visible;
   min-height: 50px;
   width: 100%;
-  max-width: 100%;
 }
 
 .topbar-content {
@@ -88,7 +79,6 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
-  max-width: 100%;
 }
 
 .topbar-left {
@@ -268,13 +258,10 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   top: var(--topbar-height, 50px);
   z-index: 999; 
   width: 100%;
-  max-width: 100%;
   background: rgba(255,255,255,0.98); 
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   transition: top 0.3s ease;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 .header-content {
@@ -286,11 +273,8 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   padding: 16px 32px;
   flex-wrap: nowrap;
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
   justify-content: space-between; /* Restored to match About/Services/Testimonials pages */
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 .brand { 
@@ -351,7 +335,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   gap: 8px; 
   align-items: center; 
   flex-wrap: nowrap; 
-  flex-shrink: 1;
+  flex-shrink: 0;
   min-width: 0;
 }
 .nav a { 
@@ -436,14 +420,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 }
 .cta:hover { background: var(--accent-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
 
-.main { 
-  width: 100%; 
-  max-width: 1400px; 
-  margin: 0 auto; 
-  padding: 32px; 
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
+.main { width: 100%; max-width: 1400px; margin: 0 auto; padding: 32px; }
 
 .section { 
   padding: 40px; 
@@ -3729,9 +3706,9 @@ body {
 }
 
 .rakshana-profile-img {
-  object-position: center top;
+  object-position: center center;
   object-fit: cover;
-  transform: scale(1.1);
+  transform: none;
   filter: none;
 }
 
@@ -5150,12 +5127,13 @@ body {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   background: var(--white);
   border: 3px solid var(--brand-light);
+  min-height: 500px;
 }
 
 .contact-map-iframe {
@@ -5164,6 +5142,13 @@ body {
   border: none;
   display: block;
   min-height: 300px;
+  background: #f5f5f5;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-map-iframe[src=""] {
+  display: none;
 }
 
 .contact-map-overlay {
@@ -8275,7 +8260,7 @@ body {
   /* Contact Map Mobile */
   .contact-map-container {
     border-radius: 16px;
-    margin: 24px 16px 0;
+    margin: 16px 16px 0;
     border-width: 2px;
     width: calc(100% - 32px);
     max-width: none;
@@ -8285,17 +8270,26 @@ body {
     height: 350px;
     min-height: 300px;
     width: 100%;
+    background: #f5f5f5;
   }
-
+  
+  .contact-map-container {
+    min-height: 350px;
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
   .contact-map-overlay {
+    pointer-events: none;
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
     max-width: 280px;
   }
-
+  
   .contact-map-overlay .btn {
+    pointer-events: auto;
     padding: 10px 20px;
     font-size: 0.9rem;
     width: 100%;
