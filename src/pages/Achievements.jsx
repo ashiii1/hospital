@@ -257,7 +257,7 @@ export default function Achievements() {
             {achievements.map((achievement, index) => (
               <FadeIn key={achievement.id} delay={index * 50}>
                 <div 
-                  className={`achievement-card-modern ${flippedCards[achievement.id] ? 'flipped' : ''}`}
+                  className={`achievement-card-modern ${achievement.id === 2 ? 'achievement-card-2' : ''} ${achievement.id === 17 ? 'achievement-card-17' : ''} ${flippedCards[achievement.id] ? 'flipped' : ''}`}
                   onClick={(e) => handleCardClick(achievement.id, e)}
                   role="button"
                   tabIndex={0}
