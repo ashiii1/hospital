@@ -21,6 +21,7 @@ import totalHipReplacement from '../assets/Total Hip Replacement .jpeg'
 import reverseShoulderReplacement from '../assets/Reverse shoulder replacement .jpeg'
 import revisionBefore from '../assets/Revision before .jpeg'
 import revisionAfter from '../assets/Revision after .jpeg'
+import osteoidOsteomaImg from '../assets/osteoid osteoma.jpeg'
 
 const xrayImages = {
   1: msmchSurgery,        // First MSMCH Ortho in Kavali
@@ -39,6 +40,7 @@ const xrayImages = {
   14: softTissueImg,      // Soft Tissue Reconstruction
   15: tendonTransferImg,  // Tendon Transfer
   16: revisionAfter,      // Comprehensive Revision Surgeries (After)
+  17: osteoidOsteomaImg,  // Osteoid Osteoma Surgery
 }
 
 export default function Achievements() {
@@ -49,7 +51,7 @@ export default function Achievements() {
   // Major Statistics
   const stats = [
     { 
-      number: "16", 
+      number: "17", 
       suffix: "+", 
       label: t.achievements.majorMilestones,
       duration: 1800
@@ -170,6 +172,12 @@ export default function Achievements() {
       id: 16, 
       key: 'revisionSurgeries',
       category: t.achievements.categoryAdvanced,
+      imagePlaceholder: true
+    },
+    { 
+      id: 17, 
+      key: 'osteoidOsteoma',
+      category: t.achievements.categorySpecialized,
       imagePlaceholder: true
     }
   ]

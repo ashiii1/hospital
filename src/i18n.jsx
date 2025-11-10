@@ -324,6 +324,10 @@ export const translations = {
       revisionSurgeriesTitle: 'Comprehensive Revision Surgeries',
       revisionSurgeriesDesc: 'Our expertise extends to revision surgeries across all orthopaedic sub-specialties — including fracture fixations, joint replacements, and spinal operations. Each revision case is carefully evaluated to ensure optimal surgical planning, infection control, and structural correction for lasting recovery.',
       
+      // Achievement 17: Osteoid Osteoma
+      osteoidOsteomaTitle: 'Successful Osteoid Osteoma Excision',
+      osteoidOsteomaDesc: 'Our team successfully performed a complex orthopedic surgery on a 17-year-old boy suffering from severe persistent leg pain. An MRI revealed an osteoid osteoma of the femur — a lytic lesion with a nidus on the medial shaft. We performed complete excision of the bone tumor, followed by fibular bone grafting and G-bone placement to ensure stability. The surgery was a complete success, and the patient tolerated the procedure well, restoring hope and health.',
+      
       // CTA Section
       ctaTitle: 'Experience World-Class Orthopedic Care',
       ctaDescription: 'Join thousands of patients who have trusted us with their orthopedic health. Our pioneering achievements and expert team are ready to provide you with the best care possible.',
@@ -830,6 +834,10 @@ export const translations = {
       // Achievement 16: Revision Surgeries
       revisionSurgeriesTitle: 'సమగ్ర రివిజన్ శస్త్రచికిత్సలు',
       revisionSurgeriesDesc: 'మా నైపుణ్యం అన్ని ఆర్థోపెడిక్ ఉప-ప్రత్యేకతలలో రివిజన్ శస్త్రచికిత్సలకు విస్తరించింది - ఫ్రాక్చర్ ఫిక్సేషన్‌లు, జాయింట్ రీప్లేస్‌మెంట్లు మరియు వెన్నెముక కార్యకలాపాలతో సహా. ప్రతి రివిజన్ కేసు శాశ్వత రికవరీ కోసం సరైన శస్త్రచికిత్స ప్రణాళిక, ఇన్ఫెక్షన్ నియంత్రణ మరియు నిర్మాణాత్మక దిద్దుబాటును నిర్ధారించడానికి జాగ్రత్తగా మూల్యాంకనం చేయబడుతుంది.',
+      
+      // Achievement 17: Osteoid Osteoma
+      osteoidOsteomaTitle: 'విజయవంతమైన ఆస్టియాయిడ్ ఆస్టియోమా ఎక్సిషన్',
+      osteoidOsteomaDesc: 'మా బృందం తీవ్రమైన నిరంతర కాళ్ళ నొప్పితో బాధపడుతున్న 17 సంవత్సరాల వయస్సులోని అబ్బాయిపై సంక్లిష్టమైన ఆర్థోపెడిక్ శస్త్రచికిత్సను విజయవంతంగా నిర్వహించింది. MRI ఫీమర్ యొక్క ఆస్టియాయిడ్ ఆస్టియోమాను వెల్లడి చేసింది — మీడియల్ షాఫ్ట్‌లో నిడస్‌తో కూడిన లైటిక్ లెషన్. మేము ఎముక ట్యూమర్ యొక్క పూర్తి ఎక్సిషన్‌ను నిర్వహించాము, తర్వాత స్థిరత్వాన్ని నిర్ధారించడానికి ఫిబ్యులర్ ఎముక గ్రాఫ్టింగ్ మరియు G-ఎముక ప్లేస్‌మెంట్ చేసాము. శస్త్రచికిత్స పూర్తి విజయం సాధించింది మరియు రోగి ప్రక్రియను బాగా సహించాడు, ఆశ మరియు ఆరోగ్యాన్ని పునరుద్ధరించాడు.',
       
       // CTA Section
       ctaTitle: 'ప్రపంచ-స్థాయి ఆర్థోపెడిక్ కేర్‌ను అనుభవించండి',
