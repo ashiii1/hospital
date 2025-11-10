@@ -54,24 +54,20 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   min-height: 100%; 
   display: grid; 
   grid-template-rows: auto 1fr auto; 
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* ===== TOPBAR REDESIGN ===== */
 .topbar { 
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
   background: linear-gradient(135deg, var(--brand-dark), var(--brand));
   color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: visible;
   min-height: 50px;
   width: 100%;
-  max-width: 100%;
 }
 
 .topbar-content {
@@ -88,7 +84,6 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
-  max-width: 100%;
 }
 
 .topbar-left {
@@ -268,13 +263,10 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   top: var(--topbar-height, 50px);
   z-index: 999; 
   width: 100%;
-  max-width: 100%;
   background: rgba(255,255,255,0.98); 
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   transition: top 0.3s ease;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 .header-content {
@@ -289,8 +281,6 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   max-width: 100%;
   box-sizing: border-box;
   justify-content: space-between; /* Restored to match About/Services/Testimonials pages */
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 .brand { 
@@ -1972,6 +1962,18 @@ body {
   .hamburger { display: inline-flex; }
   .mobile-open .nav { display: none; }
   .mobile-open .mobile-menu { display: block; }
+}
+
+/* Ensure mobile menu works on small laptops (861px-1200px) with sticky topbar */
+@media (max-width: 1200px) and (min-width: 861px) {
+  .mobile-open .nav { display: none !important; }
+  .mobile-open .mobile-menu { display: block !important; }
+  .mobile-open .mobile-menu { 
+    z-index: 1001; /* Above sticky topbar and header */
+  }
+}
+
+@media (max-width: 860px) {
   .main { 
     padding: 20px 20px 80px; 
     overflow-x: hidden;
@@ -5150,12 +5152,13 @@ body {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   background: var(--white);
   border: 3px solid var(--brand-light);
+  min-height: 500px;
 }
 
 .contact-map-iframe {
@@ -5164,6 +5167,13 @@ body {
   border: none;
   display: block;
   min-height: 300px;
+  background: #f5f5f5;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-map-iframe[src=""] {
+  display: none;
 }
 
 .contact-map-overlay {
@@ -7545,17 +7555,20 @@ body {
 
 /* Remove hero compression - keep original sizes */
 
-/* Very Small Laptops (1200px and below) - Compact topbar */
+/* Very Small Laptops (1200px and below) - Hybrid Solution: Sticky + Hamburger Menu */
 @media (max-width: 1200px) and (min-width: 861px) {
   :root {
     --topbar-height: 44px;
   }
   
+  /* Keep topbar sticky and compact */
   .topbar {
     min-height: 44px;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: block;
+    z-index: 1000;
   }
   
   .topbar-content {
@@ -7633,6 +7646,7 @@ body {
     display: none;
   }
   
+  /* Keep header sticky below topbar */
   .header {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -7641,20 +7655,26 @@ body {
     display: block !important;
   }
   
+  /* HYBRID SOLUTION: Hide nav items, show hamburger menu */
   .nav {
-    display: flex !important;
-    gap: 6px;
-    flex-shrink: 0; /* Changed to prevent nav compression */
-  }
-  
-  .nav a {
-    font-size: 0.85rem;
-    padding: 8px 12px;
-    flex-shrink: 0;
+    display: none !important;
   }
   
   .hamburger {
-    display: none !important;
+    display: inline-flex !important;
+    margin-left: auto;
+  }
+  
+  /* Mobile menu positioning - account for sticky topbar + header */
+  .mobile-menu {
+    top: 0;
+    padding-top: calc(44px + 70px + 20px); /* topbar height + header height + padding */
+    z-index: 1001; /* Above sticky topbar (1000) and header (999) */
+  }
+  
+  .mobile-menu-close {
+    top: calc(44px + 18px); /* topbar height + original top */
+    z-index: 1002; /* Above mobile menu */
   }
   
   .header-content {
@@ -7663,7 +7683,7 @@ body {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-between; /* Added to match base styles */
+    justify-content: space-between;
   }
   
   .brand-banner-logo {
@@ -7754,7 +7774,8 @@ body {
 }
 
 /* HP Probook and similar (1366px) - Single Row Compact */
-@media (max-width: 1366px) {
+/* HP Probook and similar (1366px) - Only apply to screens > 1200px */
+@media (min-width: 1201px) and (max-width: 1366px) {
   .topbar-content {
     padding: 7px 16px;
     font-size: 0.78rem;
@@ -7786,7 +7807,7 @@ body {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-between; /* Added to match base styles */
+    justify-content: space-between;
   }
 
   .brand-banner-logo {
@@ -7796,7 +7817,7 @@ body {
 
   .nav {
     gap: 8px;
-    flex-shrink: 0; /* Changed to prevent nav compression */
+    flex-shrink: 0;
   }
 
   .nav a {
@@ -7806,8 +7827,8 @@ body {
   }
 }
 
-/* Very Small Laptops (1280px) - More Compact Single Row */
-@media (max-width: 1280px) {
+/* Very Small Laptops (1280px) - More Compact Single Row - Only apply to screens > 1200px */
+@media (min-width: 1201px) and (max-width: 1280px) {
   .topbar-content {
     padding: 6px 12px;
     font-size: 0.75rem;
@@ -8275,19 +8296,24 @@ body {
   /* Contact Map Mobile */
   .contact-map-container {
     border-radius: 16px;
-    margin: 24px 16px 0;
+    margin: 16px 16px 0;
     border-width: 2px;
     width: calc(100% - 32px);
     max-width: none;
+    min-height: 350px;
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .contact-map-iframe {
     height: 350px;
     min-height: 300px;
     width: 100%;
+    background: #f5f5f5;
   }
 
   .contact-map-overlay {
+    pointer-events: none;
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
@@ -8296,6 +8322,7 @@ body {
   }
 
   .contact-map-overlay .btn {
+    pointer-events: auto;
     padding: 10px 20px;
     font-size: 0.9rem;
     width: 100%;
@@ -10459,6 +10486,74 @@ body {
     max-width: 100%;
     padding: 0 4px;
     margin: 0;
+  }
+  
+  /* Card #17 specific adjustments for longer content */
+  .achievement-card-17 {
+    height: 450px !important;
+  }
+  
+  .achievement-card-17 .achievement-card-back {
+    padding: 10px 8px 32px;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  
+  .achievement-card-17 .achievement-back-content {
+    gap: 5px;
+    padding-bottom: 0;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  
+  .achievement-card-17 .achievement-back-title {
+    font-size: 0.82rem;
+    margin-bottom: 3px;
+    line-height: 1.25;
+    flex-shrink: 0;
+  }
+  
+  .achievement-card-17 .achievement-description {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow: visible;
+  }
+  
+  /* Card #2 specific adjustments for longer content */
+  .achievement-card-2 {
+    height: 420px !important;
+  }
+  
+  .achievement-card-2 .achievement-card-back {
+    padding: 10px 8px 32px;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  
+  .achievement-card-2 .achievement-back-content {
+    gap: 5px;
+    padding-bottom: 0;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  
+  .achievement-card-2 .achievement-back-title {
+    font-size: 0.82rem;
+    margin-bottom: 3px;
+    line-height: 1.25;
+    flex-shrink: 0;
+  }
+  
+  .achievement-card-2 .achievement-description {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow: visible;
   }
   
   /* Smooth scrolling for back card */
