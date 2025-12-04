@@ -228,16 +228,6 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* Hiring Banner */}
-      <div className="hiring-banner">
-        <div className="hiring-banner-content">
-          <span>🩺 {t.home.hiringBanner} <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> {t.home.hiringBannerPhone} 🩺</span>
-          <span>🩺 {t.home.hiringBanner} <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> {t.home.hiringBannerPhone} 🩺</span>
-          <span>🩺 {t.home.hiringBanner} <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> {t.home.hiringBannerPhone} 🩺</span>
-          <span>🩺 {t.home.hiringBanner} <a href="tel:+917824055789" className="hiring-phone">+91 7824055789</a> {t.home.hiringBannerPhone} 🩺</span>
-        </div>
-      </div>
-
       {/* Hero Section - No FadeIn wrapper so video plays immediately */}
       <section className="hero-section-new hero-parallax animate-in" role="banner">
         {/* Video Background */}

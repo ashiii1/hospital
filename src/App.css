@@ -507,6 +507,14 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   justify-content: space-between;
   width: 100%;
 }
+.footer-division-text {
+  font-size: 0.8em;
+  opacity: 0.85;
+  margin-top: 6px;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.9);
+}
 .footer a { color: var(--accent-light); text-decoration: none; font-weight: 500; cursor: pointer; }
 .footer a:hover { color: var(--white); text-decoration: underline; }
 .footer .links { display: flex; gap: 20px; }
