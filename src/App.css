@@ -143,16 +143,98 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   font-weight: 400;
 }
 
+.topbar-whatsapp-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.topbar-whatsapp-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+}
+
 .topbar-whatsapp {
   background: #25D366;
   color: white;
   border: 1px solid #1fb855;
 }
 
-.topbar-whatsapp:hover {
+.topbar-whatsapp-wrap:hover .topbar-whatsapp-trigger {
   background: #1fb855;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.topbar-whatsapp-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  margin-top: 8px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.topbar-whatsapp-wrap:hover .topbar-whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.topbar-whatsapp-tooltip .topbar-tooltip-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -6px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.98);
+  filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.06));
+}
+
+.topbar-whatsapp-tooltip-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.98);
+  color: #1a3a47;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.08);
+  min-width: 260px;
+  border: 1px solid rgba(42, 91, 108, 0.12);
+}
+
+.topbar-whatsapp-option {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--brand);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.topbar-whatsapp-option:hover {
+  background: rgba(42, 91, 108, 0.08);
+  color: var(--brand-dark);
 }
 
 .topbar-feedback {
@@ -191,6 +273,73 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 
 .topbar-address:hover .topbar-icon {
   transform: translateY(-2px);
+}
+
+.topbar-locations {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.topbar-location-item {
+  position: relative;
+}
+.topbar-location-label {
+  font-weight: 500;
+}
+.topbar-location-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  margin-top: 8px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+}
+.topbar-location-item:hover .topbar-location-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.topbar-tooltip-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -6px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.98);
+  filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.06));
+}
+.topbar-tooltip-inner {
+  display: block;
+  background: rgba(255, 255, 255, 0.98);
+  color: #1a3a47;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.08);
+  min-width: 260px;
+  max-width: 320px;
+  border: 1px solid rgba(42, 91, 108, 0.12);
+}
+.topbar-tooltip-address {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  font-weight: 500;
+  color: #214855;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+.topbar-tooltip-action {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: 0.02em;
 }
 
 .topbar-icon {
@@ -365,6 +514,16 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   background: var(--brand); 
   color: var(--white); 
   box-shadow: var(--shadow-sm);
+}
+/* OT & ICU Care: always use light beige + dark teal (default and hover) */
+.nav a[href="/ot-icu-care"],
+.nav a[href="/ot-icu-care"]:hover,
+.nav a[href="/ot-icu-care"].active,
+.nav a[href="/ot-icu-care"].active:hover {
+  background: #EDECE4;
+  color: #3F6E7B;
+  box-shadow: var(--shadow-sm);
+  transform: none;
 }
 .nav a:active {
   transform: translateY(0);
@@ -935,6 +1094,62 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 
 .quick-action-btn:nth-child(5):hover {
   background: linear-gradient(135deg, var(--slate), #5a7a8c);
+}
+
+.quick-actions-location-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quick-actions-location-wrap .quick-action-btn-location {
+  background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+.quick-actions-location-wrap .quick-action-btn-location:hover {
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+}
+.quick-actions-location-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 0 1px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  min-width: 140px;
+  z-index: 1002;
+  border: 1px solid rgba(42, 91, 108, 0.12);
+}
+.quick-actions-location-option {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #214855;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.quick-actions-location-option:hover,
+.quick-actions-location-option:focus {
+  background: rgba(42, 91, 108, 0.08);
+  outline: none;
+}
+.quick-actions-location-option:first-child {
+  border-radius: 12px 12px 0 0;
+}
+.quick-actions-location-option:last-child {
+  border-radius: 0 0 12px 12px;
 }
 
 /* Improved Focus States for Accessibility */
@@ -1950,6 +2165,16 @@ body {
   background: linear-gradient(90deg, var(--sand), transparent);
   color: var(--brand);
   border-left-color: var(--brand);
+  font-weight: 600;
+}
+/* OT & ICU Care in mobile: same light beige + dark teal (default and hover) */
+.mobile-menu a[href="/ot-icu-care"],
+.mobile-menu a[href="/ot-icu-care"]:hover,
+.mobile-menu a[href="/ot-icu-care"].active,
+.mobile-menu a[href="/ot-icu-care"].active:hover {
+  background: linear-gradient(90deg, #EDECE4, transparent);
+  color: #3F6E7B;
+  border-left-color: #3F6E7B;
   font-weight: 600;
 }
 
@@ -4869,6 +5094,58 @@ body {
   font-size: 1.1rem;
   color: var(--text);
   line-height: 1.7;
+}
+
+/* Contact page: two divisions — Consultations (blue header) & OT&ICU Care (olive header) */
+.contact-page-section {
+  margin-bottom: 48px;
+}
+.contact-section-header.consultations {
+  margin-bottom: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-section-header.consultations h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #2a5b6c 0%, #214855 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.contact-section-header.consultations h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+.contact-section-header.ot-icu h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.contact-section-header.ot-icu h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 /* Contact Info Cards */
@@ -12490,6 +12767,19 @@ body {
   color: #fff !important;
   text-align: center;
   letter-spacing: 0.05em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ot-icu-contact .contact-content h2 .contact-title-line {
+  display: block;
+}
+.ot-icu-contact .contact-content h2 .contact-division-line {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-top: 4px;
 }
 .ot-icu-contact .contact-content h2::after {
   content: "";
