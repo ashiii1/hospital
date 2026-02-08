@@ -17,8 +17,10 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [locationMenuOpen, setLocationMenuOpen] = useState(false)
   const [whatsappOpen, setWhatsappOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const locationMenuRef = useRef(null)
   const whatsappRef = useRef(null)
+  const servicesRef = useRef(null)
   
   useEffect(() => {
     if (!locationMenuOpen) return
@@ -37,6 +39,15 @@ function App() {
     document.addEventListener('click', handleClickOutside)
     return () => document.removeEventListener('click', handleClickOutside)
   }, [whatsappOpen])
+
+  useEffect(() => {
+    if (!servicesOpen) return
+    const handleClickOutside = (e) => {
+      if (servicesRef.current && !servicesRef.current.contains(e.target)) setServicesOpen(false)
+    }
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [servicesOpen])
   
   const openKavaliMaps = () => {
     window.open('https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7', '_blank', 'noopener,noreferrer')
@@ -184,12 +195,16 @@ function App() {
           <nav className="nav" role="navigation" aria-label="Primary navigation">
             <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.home}</NavLink>
             <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.about}</NavLink>
-            <div className="dropdown">
+            <div
+              ref={servicesRef}
+              className={`dropdown ${servicesOpen ? 'open' : ''}`}
+            >
               <button
                 type="button"
                 className={`dropdown-trigger ${pathname === '/services' || pathname === '/facilities' ? 'active' : ''}`}
                 aria-haspopup="true"
-                aria-expanded="false"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen((v) => !v)}
               >
                 {t.nav.services}
                 <svg className="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
@@ -197,8 +212,8 @@ function App() {
                 </svg>
               </button>
               <div className="menu">
-                <NavLink to="/services">{t.nav.services}</NavLink>
-                <NavLink to="/facilities">{t.nav.facilities}</NavLink>
+                <NavLink to="/services" onClick={() => setServicesOpen(false)}>{t.nav.services}</NavLink>
+                <NavLink to="/facilities" onClick={() => setServicesOpen(false)}>{t.nav.facilities}</NavLink>
               </div>
             </div>
             <NavLink to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>

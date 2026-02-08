@@ -340,8 +340,8 @@ export const translations = {
     contact: {
       title: 'Contact & Location',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Get in touch with us for appointments, inquiries, or emergency care.',
-      sectionConsultations: 'Consultations:',
-      sectionOtIcuCare: 'OT & ICU Care:',
+      sectionConsultations: 'Kavali Division',
+      sectionOtIcuCare: 'Nellore Division',
       address: 'Address',
       addressLine1: 'Vishanalayam Street',
       addressLine2: 'Kavali, Nellore District',
@@ -370,6 +370,7 @@ export const translations = {
       bookAppointment: 'Book an Appointment',
       bookAppointmentText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Schedule your consultation with our experienced medical team today.',
       callNow: 'Call Now',
+      phoneNote: 'Please note that we do not take consultations and appointments.',
       bookOnline: 'Book Online',
       // Feedback Form
       shareYourFeedback: 'Share Your Feedback',
@@ -895,8 +896,8 @@ export const translations = {
     contact: {
       title: 'సంప్రదింపు మరియు స్థానం',
       subtitle: 'అపాయింట్‌మెంట్లు, విచారణలు లేదా అత్యవసర సంరక్షణ కోసం మాతో సంప్రదించండి.',
-      sectionConsultations: 'సంప్రదింపులు:',
-      sectionOtIcuCare: 'OT & ICU కేర్:',
+      sectionConsultations: 'కావలి డివిజన్',
+      sectionOtIcuCare: 'నెల్లూరు డివిజన్',
       address: 'చిరునామా',
       addressLine1: 'విషణాలయం వీధి',
       addressLine2: 'కావలి, నెల్లూరు జిల్లా',
@@ -925,6 +926,7 @@ export const translations = {
       bookAppointment: 'అపాయింట్‌మెంట్ బుక్ చేయండి',
       bookAppointmentText: 'మా అనుభవజ్ఞులైన వైద్య బృందంతో మీ సంప్రదింపును ఈరోజే షెడ్యూల్ చేయండి.',
       callNow: 'ఇప్పుడే కాల్ చేయండి',
+      phoneNote: 'దయచేసి మేము సంప్రదింపులు మరియు అపాయింట్‌మెంట్లు తీసుకోమని గమనించండి.',
       bookOnline: 'ఆన్‌లైన్‌లో బుక్ చేయండి',
       // Feedback Form
       shareYourFeedback: 'మీ అభిప్రాయాన్ని పంచుకోండి',

@@ -5301,6 +5301,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .contact-highlight-text {
@@ -12864,7 +12865,7 @@ body {
   margin: 4px 0;
   line-height: 1.55;
   color: #1a3a47;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .ot-icu-contact .contact-card-content .contact-highlight-text {
