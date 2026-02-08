@@ -15,6 +15,8 @@ export const translations = {
     },
     topbar: {
       location: 'Vishanalayam Street, Kavali, Nellore',
+      kavali: 'Kavali',
+      nellore: 'Nellore',
       emergency: 'Emergency',
       feedback: 'Feedback'
     },
@@ -338,6 +340,8 @@ export const translations = {
     contact: {
       title: 'Contact & Location',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Get in touch with us for appointments, inquiries, or emergency care.',
+      sectionConsultations: 'Consultations:',
+      sectionOtIcuCare: 'OT & ICU Care:',
       address: 'Address',
       addressLine1: 'Vishanalayam Street',
       addressLine2: 'Kavali, Nellore District',
@@ -539,6 +543,7 @@ export const translations = {
       feature4: 'Seamless coordination for surgeries',
       ctaText: 'One trusted destination for safe surgeries and critical care.',
       contactUs: 'Contact Us:',
+      nelloreDivision: '(Nellore Division)',
       contactAddressLabel: 'Address',
       contactPhoneLabel: 'Phone',
       address: '16/2/241, 2nd floor, Beside Subramanya Swamy Temple street, Gandhinagar, Pogathota, Nellore - 524001',
@@ -565,6 +570,8 @@ export const translations = {
     },
     topbar: {
       location: 'విషణాలయం వీధి, కావలి, నెల్లూరు',
+      kavali: 'కావలి',
+      nellore: 'నెల్లూరు',
       emergency: 'ఎమర్జెన్సీ',
       feedback: 'అభిప్రాయం'
     },
@@ -888,6 +895,8 @@ export const translations = {
     contact: {
       title: 'సంప్రదింపు మరియు స్థానం',
       subtitle: 'అపాయింట్‌మెంట్లు, విచారణలు లేదా అత్యవసర సంరక్షణ కోసం మాతో సంప్రదించండి.',
+      sectionConsultations: 'సంప్రదింపులు:',
+      sectionOtIcuCare: 'OT & ICU కేర్:',
       address: 'చిరునామా',
       addressLine1: 'విషణాలయం వీధి',
       addressLine2: 'కావలి, నెల్లూరు జిల్లా',
@@ -1089,6 +1098,7 @@ export const translations = {
       feature4: 'శస్త్రచికిత్సల కోసం సజావుగా సమన్వయం',
       ctaText: 'సురక్షితమైన శస్త్రచికిత్సలు మరియు క్లిష్టమైన సంరక్షణ కోసం ఒక నమ్మదగిన గమ్యస్థానం.',
       contactUs: 'మమ్మల్ని సంప్రదించండి:',
+      nelloreDivision: '(నెల్లూరు డివిజన్)',
       contactAddressLabel: 'చిరునామా',
       contactPhoneLabel: 'ఫోన్',
       address: '16/2/241, 2వ అంతస్తు, సుబ్రమణ్య స్వామి దేవాలయ వీధి పక్కన, గాంధీనగర్, పోగతోట, నెల్లూరు - 524001',
