@@ -14,6 +14,7 @@ const About = lazy(() => import('./pages/About.jsx'))
 const Services = lazy(() => import('./pages/Services.jsx'))
 const Doctors = lazy(() => import('./pages/Doctors.jsx'))
 const Facilities = lazy(() => import('./pages/Facilities.jsx'))
+const OTIcuCare = lazy(() => import('./pages/OTIcuCare.jsx'))
 const Testimonials = lazy(() => import('./pages/Testimonials.jsx'))
 const Achievements = lazy(() => import('./pages/Achievements.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: 'services', element: <Services /> },
       { path: 'doctors', element: <Doctors /> },
       { path: 'facilities', element: <Facilities /> },
+      { path: 'ot-icu-care', element: <OTIcuCare /> },
       { path: 'testimonials', element: <Testimonials /> },
       { path: 'achievements', element: <Achievements /> },
       { path: 'contact', element: <Contact /> },

@@ -371,6 +371,40 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 }
 
 .dropdown { position: relative; }
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.dropdown-trigger:hover {
+  background: var(--sand);
+  color: var(--brand);
+  transform: translateY(-1px);
+}
+.dropdown-trigger.active {
+  background: var(--brand);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.dropdown-arrow {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+.dropdown-trigger.active .dropdown-arrow {
+  opacity: 1;
+}
+
 .dropdown .menu { 
   position: absolute; 
   top: 100%; 
@@ -1819,7 +1853,7 @@ body {
     justify-content: center;
   }
   
-  .nav a, .mobile-menu a {
+  .nav a, .nav .dropdown-trigger, .mobile-menu a {
     min-height: 48px;
     display: flex;
     align-items: center;
@@ -3413,6 +3447,16 @@ body {
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+/* Subtle float for OT hero logo (shorter travel) */
+@keyframes floatAnimationSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
 
@@ -7554,9 +7598,10 @@ body {
     flex-shrink: 0; /* Changed to prevent nav compression */
   }
 
-  .nav a {
+  .nav a,
+  .nav .dropdown-trigger {
     font-size: 0.88rem;
-    padding: 8px 12px;
+    padding: 8px 7px;
     flex-shrink: 0;
   }
 }
@@ -7774,7 +7819,8 @@ body {
     flex-shrink: 0; /* Changed from default to prevent nav compression */
   }
 
-  .nav a {
+  .nav a,
+  .nav .dropdown-trigger {
     font-size: 0.8rem;
     padding: 6px 8px;
   }
@@ -7828,7 +7874,8 @@ body {
     flex-shrink: 0;
   }
 
-  .nav a {
+  .nav a,
+  .nav .dropdown-trigger {
     font-size: 0.84rem;
     padding: 8px 10px;
     flex-shrink: 0;
@@ -7893,7 +7940,8 @@ body {
     flex-shrink: 0; /* Changed to prevent nav compression */
   }
 
-  .nav a {
+  .nav a,
+  .nav .dropdown-trigger {
     font-size: 0.8rem;
     padding: 7px 9px;
     flex-shrink: 0;
@@ -11771,6 +11819,937 @@ body {
   
   .star-icon {
     animation: none !important;
+  }
+}
+
+/* ===== OT & ICU CARE PAGE STYLES ===== */
+/* OT & ICU Care page — distinct hero theme (blue + soft beige) across entire page */
+.ot-icu-care-page {
+  padding: 0;
+  background: #ede9dd;
+  box-shadow: none;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+/* Override default .section white card so hero theme shows */
+.section.ot-icu-care-page {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ===== OT & ICU HERO — Brochure-Style with SVG Waves ===== */
+.ot-icu-hero {
+  position: relative;
+  background: #ede9dd;
+  padding: 0;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: stretch;
+}
+
+.ot-icu-hero-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hero content: row layout — text left, logo right (aligned per mockup) */
+.ot-icu-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 96px 56px 60px;
+}
+
+.ot-icu-hero-left {
+  max-width: 600px;
+  text-align: center;
+}
+
+.ot-icu-hero-text-stagger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Distinctive entrance for title group on page load */
+@keyframes heroGroupEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+  }
+  70% {
+    transform: translateY(-4px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ot-icu-hero-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.25rem;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.ot-icu-hero-title-group:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 4px 12px rgba(42, 91, 108, 0.08));
+}
+
+.ot-icu-hero-text-stagger.animate-in > .ot-icu-hero-title-group {
+  animation: heroGroupEnter 0.75s cubic-bezier(0.34, 1.2, 0.64, 1) 0s forwards;
+}
+
+.ot-icu-hero-text-stagger.animate-in > .ot-icu-hero-subtitle { animation-delay: 0.35s; }
+.ot-icu-hero-text-stagger.animate-in > .ot-icu-tagline { animation-delay: 0.5s; }
+.ot-icu-hero-text-stagger.animate-in > .ot-icu-quote { animation-delay: 0.65s; }
+
+/* Logo — right of text; top aligned with "Dr. Ramaswamy Hospitals", height spans to subtitle */
+.ot-icu-hero-logo {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 3.25rem;
+  max-width: min(420px, 38vw);
+  /* Glassy panel — larger container to match logo width */
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 28px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 8px 32px rgba(42, 91, 108, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.ot-icu-hero-logo:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 12px 40px rgba(42, 91, 108, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.ot-icu-hero-logo-img {
+  width: 100%;
+  height: auto;
+  max-height: 165px;
+  object-fit: contain;
+  object-position: left top;
+  display: block;
+  border-radius: 14px;
+  filter:
+    drop-shadow(0 12px 24px rgba(42, 91, 108, 0.2))
+    drop-shadow(0 25px 50px rgba(42, 91, 108, 0.15))
+    drop-shadow(0 4px 12px rgba(42, 91, 108, 0.12));
+  animation: floatAnimationSubtle 6s ease-in-out infinite;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.ot-icu-hero-logo-img:hover {
+  filter:
+    drop-shadow(0 20px 40px rgba(42, 91, 108, 0.25))
+    drop-shadow(0 35px 60px rgba(42, 91, 108, 0.2))
+    drop-shadow(0 8px 20px rgba(42, 91, 108, 0.18));
+  transform: scale(1.02) translateY(-10px);
+  animation-play-state: paused;
+}
+
+.ot-icu-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  background: #87996f;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ot-icu-badge:hover {
+  background: #758a5e;
+  transform: translateY(-1px);
+}
+
+.ot-icu-title {
+  margin: 0 0 8px;
+  line-height: 1.15;
+}
+
+.ot-icu-title-dr {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #214855;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+
+.ot-icu-title-main {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #2a5b6c;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.ot-icu-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2a5b6c, #4d8f9e);
+  margin: 16px auto 10px;
+  border-radius: 2px;
+}
+
+.ot-icu-subtitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #4d8f9e;
+  margin: 0 0 7px;
+  line-height: 1.45;
+}
+
+.ot-icu-tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4d8f9e;
+  margin: 0 0 24px;
+  letter-spacing: 0.08em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.ot-icu-tagline-item {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  cursor: default;
+}
+
+.ot-icu-tagline-item:hover {
+  color: #2a5b6c;
+  transform: scale(1.05);
+  background: rgba(42, 91, 108, 0.08);
+}
+
+.ot-icu-tagline-item:focus-visible {
+  outline: 2px solid #62a6b8;
+  outline-offset: 2px;
+}
+
+.ot-icu-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0 auto 28px;
+  max-width: 520px;
+}
+
+.ot-icu-quote-mark {
+  font-size: 3rem;
+  line-height: 1;
+  color: #2a5b6c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: -6px;
+}
+
+.ot-icu-quote-mark-end {
+  align-self: flex-end;
+  margin-top: 0;
+  margin-bottom: -6px;
+}
+
+.ot-icu-quote p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a3a47;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.ot-icu-quote:hover p {
+  color: #2a5b6c;
+  opacity: 1;
+}
+
+.ot-icu-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #d8e2e6;
+  align-items: start;
+}
+
+.ot-icu-why-choose {
+  background: #eee9dd;
+  padding: 36px 28px;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(42, 91, 108, 0.1);
+  border: 1px solid rgba(98, 166, 184, 0.25);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.ot-icu-why-choose:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(42, 91, 108, 0.14);
+  border-color: rgba(98, 166, 184, 0.4);
+}
+
+.why-choose-header {
+  margin-bottom: 24px;
+}
+
+.why-choose-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.why-choose-header h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.why-choose-trust-line {
+  font-size: 0.9rem;
+  color: #758a5e;
+  margin: 10px 0 0;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Why Choose Us — card grid (2 cols desktop, 1 mobile), numbered, Lucide icons, hover lift+shadow */
+.why-choose-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.why-choose-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: 20px 18px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e1e7ea;
+  box-shadow: none;
+  min-height: 130px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.25s ease;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(33, 72, 85, 0.12);
+  border-color: rgba(98, 166, 184, 0.25);
+}
+
+.why-choose-card:focus-within {
+  outline: 2px solid #62a6b8;
+  outline-offset: 2px;
+}
+
+.why-choose-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  background: linear-gradient(145deg, #62a6b8 0%, #4d8f9e 100%);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 2px 10px rgba(98, 166, 184, 0.35);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+
+.why-choose-card:hover .why-choose-card-icon {
+  box-shadow: 0 4px 14px rgba(98, 166, 184, 0.45);
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #4d8f9e 0%, #214855 100%);
+}
+
+.why-choose-card-text {
+  font-size: 1.08rem;
+  color: #4b5f66;
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .why-choose-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.ot-icu-specialities {
+  background: #eee9dd;
+  padding: 36px 28px;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(42, 91, 108, 0.1);
+  border: 1px solid rgba(98, 166, 184, 0.25);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.ot-icu-specialities:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(42, 91, 108, 0.14);
+  border-color: rgba(98, 166, 184, 0.4);
+}
+
+/* Same header design as Why Choose Us: teal banner, white text, rounded, aligned to same level */
+.specialities-title,
+.ot-icu-specialities h2.specialities-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.specialities-title::after,
+.ot-icu-specialities h2.specialities-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.specialities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.speciality-card {
+  position: relative;
+  background: #fff;
+  padding: 14px;
+  padding-top: 12px;
+  border-radius: 12px;
+  border: 1px solid #e1e7ea;
+  box-shadow: none;
+  min-height: 130px;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+.speciality-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(33, 72, 85, 0.12);
+  border-color: rgba(98, 166, 184, 0.25);
+}
+
+/* Badge: softer, less loud — light fill, dark text */
+.speciality-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  background: #e3f1f5;
+  color: #2a5b6c;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: none;
+  z-index: 1;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.speciality-card:hover .speciality-badge {
+  background: rgba(227, 241, 245, 0.95);
+  transform: scale(1.03);
+}
+
+.speciality-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #4b5f66;
+  line-height: 1.3;
+  padding-top: 42px;
+  padding-left: 0;
+}
+
+/* Looking for OT — invitation-style card (light, bordered, distinct from rest of site) */
+.ot-icu-main-cta {
+  background: #eee9dd;
+  padding: 0;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 32px rgba(42, 91, 108, 0.12);
+  border: 2px solid #62a6b8;
+  overflow: hidden;
+}
+
+.ot-icu-main-cta .main-cta-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 36px 32px 44px;
+}
+
+/* Same header as Why Choose Us / Our Specialities: blue container, white font */
+.ot-icu-main-cta .main-cta-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.ot-icu-main-cta .main-cta-content h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.ot-icu-main-cta .main-cta-subtitle {
+  font-size: 1.25rem;
+  color: #214855;
+  margin: 0 0 24px;
+  font-weight: 600;
+}
+
+.ot-icu-main-cta .main-cta-description {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 28px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(42, 91, 108, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.ot-icu-main-cta .main-cta-description p {
+  font-size: 1.2rem;
+  color: #4b5f66;
+  font-weight: 500;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* OT/ICU main CTA: 4 cards in a proper 2x2 grid */
+.ot-icu-main-cta .features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ot-icu-main-cta .feature-card {
+  background: #fff;
+  padding: 24px 20px;
+  border-radius: 16px;
+  border: 1px solid #e1e7ea;
+  box-shadow: none;
+  min-height: 130px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.ot-icu-main-cta .feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(33, 72, 85, 0.12);
+  border-color: rgba(98, 166, 184, 0.25);
+}
+
+.ot-icu-main-cta .feature-icon {
+  color: #62a6b8;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ot-icu-main-cta .feature-card:hover .feature-icon {
+  transform: scale(1.05);
+  color: #214855;
+}
+
+.ot-icu-main-cta .feature-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #214855;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ot-icu-main-cta .main-cta-footer {
+  padding-top: 22px;
+  border-top: 2px solid rgba(98, 166, 184, 0.3);
+}
+
+.ot-icu-main-cta .main-cta-footer p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a5b6c;
+  margin: 0;
+}
+
+/* Contact Us — reach-out card with teal header strip (distinct from rest of site) */
+.ot-icu-contact {
+  background: #eee9dd;
+  padding: 0;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(42, 91, 108, 0.12);
+  border: 2px solid rgba(98, 166, 184, 0.35);
+  overflow: hidden;
+}
+
+.ot-icu-contact .contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Same header as Why Choose Us / Our Specialities / Looking for: blue container, white font */
+.ot-icu-contact .contact-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.ot-icu-contact .contact-content h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Same styling as Contact & Location page, but compact + OT/ICU color theme (teal/cream) */
+.ot-icu-contact .contact-info-grid {
+  margin-top: 0;
+  padding: 20px 18px 28px;
+  gap: 16px;
+}
+
+/* Cards: match section theme (cream/teal), more compact */
+.ot-icu-contact .contact-card-modern {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 24px 20px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(98, 166, 184, 0.3);
+  box-shadow: 0 2px 12px rgba(42, 91, 108, 0.08);
+}
+
+.ot-icu-contact .contact-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(42, 91, 108, 0.12);
+  border-color: rgba(98, 166, 184, 0.5);
+}
+
+.ot-icu-contact .contact-card-interactive::before {
+  background: linear-gradient(90deg, transparent, #62a6b8, transparent);
+}
+
+.ot-icu-contact .contact-card-icon-button {
+  margin-bottom: 14px;
+}
+
+.ot-icu-contact .contact-card-icon-button .icon-button-circle {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #62a6b8 0%, #4d8f9e 100%);
+  box-shadow: 0 4px 16px rgba(98, 166, 184, 0.35);
+}
+
+.ot-icu-contact .contact-card-icon-button .icon-button-circle svg {
+  width: 26px;
+  height: 26px;
+}
+
+.ot-icu-contact .contact-card-icon-button .icon-button-glow {
+  width: 56px;
+  height: 56px;
+  background: radial-gradient(circle, rgba(98, 166, 184, 0.35) 0%, transparent 70%);
+}
+
+.ot-icu-contact .contact-card-interactive:hover .icon-button-circle {
+  box-shadow: 0 6px 20px rgba(98, 166, 184, 0.45);
+}
+
+.ot-icu-contact .contact-card-title {
+  color: #2a5b6c;
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+}
+
+.ot-icu-contact .contact-card-interactive:hover .contact-card-title {
+  color: #214855;
+}
+
+.ot-icu-contact .contact-card-content {
+  margin: 0 0 14px 0;
+}
+
+.ot-icu-contact .contact-card-content p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+  line-height: 1.55;
+  color: #1a3a47;
+  font-weight: 700;
+}
+
+.ot-icu-contact .contact-card-content .contact-highlight-text {
+  font-size: 1.1rem !important;
+  margin: 6px 0 !important;
+  color: #2a5b6c !important;
+}
+
+.ot-icu-contact .contact-card-action {
+  font-size: 0.9rem;
+  padding: 4px 0;
+  color: #62a6b8;
+}
+
+.ot-icu-contact .contact-card-action::after {
+  background: #62a6b8;
+}
+
+@media (min-width: 640px) {
+  .ot-icu-contact .contact-info-grid {
+    padding: 24px 20px 32px;
+    gap: 20px;
+  }
+}
+
+/* Responsive Design for OT & ICU Care Page */
+@media (max-width: 1200px) {
+  .ot-icu-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .ot-icu-hero {
+    min-height: 420px;
+    border-radius: 16px;
+  }
+
+  .ot-icu-hero-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px 60px;
+    gap: 1.5rem;
+  }
+
+  .ot-icu-hero-logo {
+    margin-top: 0;
+    max-width: min(320px, 85vw);
+    padding: 22px 20px;
+    border-radius: 20px;
+  }
+
+  .ot-icu-hero-logo-img {
+    max-height: 110px;
+    border-radius: 12px;
+  }
+  
+  .ot-icu-title-dr {
+    font-size: 1.2rem;
+  }
+  
+  .ot-icu-title-main {
+    font-size: 2.2rem;
+  }
+  
+  .ot-icu-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .ot-icu-tagline {
+    font-size: 0.95rem;
+  }
+  
+  .ot-icu-quote p {
+    font-size: 1.05rem;
+  }
+  
+  .ot-icu-badge {
+    font-size: 0.75rem;
+    padding: 5px 16px;
+    margin-bottom: 16px;
+  }
+  
+  .ot-icu-section {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    gap: 24px;
+  }
+  
+  .ot-icu-why-choose,
+  .ot-icu-specialities {
+    padding: 20px 18px;
+  }
+  
+  .why-choose-header {
+    margin-bottom: 18px;
+  }
+  
+  .why-choose-header h2,
+  .specialities-title {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+  }
+  
+  .specialities-title,
+  .ot-icu-specialities h2.specialities-title {
+    margin-bottom: 18px;
+  }
+  
+  .why-choose-card {
+    padding: 16px 14px;
+    gap: 0;
+  }
+  
+  .why-choose-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .why-choose-card-text {
+    font-size: 1rem;
+  }
+  
+  .specialities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ot-icu-main-cta {
+    margin-bottom: 24px;
+  }
+  
+  .ot-icu-main-cta .main-cta-content {
+    padding: 28px 20px 36px;
+  }
+  
+  .ot-icu-main-cta .main-cta-content h2 {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    margin-bottom: 6px;
+  }
+  
+  .ot-icu-main-cta .main-cta-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  
+  .ot-icu-main-cta .main-cta-description {
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .ot-icu-main-cta .main-cta-description p {
+    font-size: 1rem;
+  }
+  
+  .ot-icu-main-cta .features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .ot-icu-main-cta .feature-card {
+    padding: 20px 16px;
+  }
+  
+  .ot-icu-main-cta .main-cta-footer {
+    padding-top: 18px;
+  }
+  
+  .ot-icu-contact .contact-info-grid {
+    padding: 18px 16px 24px;
+    gap: 14px;
+  }
+  
+  .ot-icu-contact .contact-content h2 {
+    font-size: 1.5rem;
+    padding: 12px 20px;
   }
 }
 
