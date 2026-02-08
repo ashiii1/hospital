@@ -169,7 +169,8 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   border: 1px solid #1fb855;
 }
 
-.topbar-whatsapp-wrap:hover .topbar-whatsapp-trigger {
+.topbar-whatsapp-wrap:hover .topbar-whatsapp-trigger,
+.topbar-whatsapp-wrap.whatsapp-open .topbar-whatsapp-trigger {
   background: #1fb855;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
@@ -188,7 +189,8 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
-.topbar-whatsapp-wrap:hover .topbar-whatsapp-tooltip {
+.topbar-whatsapp-wrap:hover .topbar-whatsapp-tooltip,
+.topbar-whatsapp-wrap.whatsapp-open .topbar-whatsapp-tooltip {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
