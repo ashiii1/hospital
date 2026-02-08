@@ -190,7 +190,10 @@ export default function OTIcuCare() {
       <FadeIn>
         <div className="ot-icu-contact">
           <div className="contact-content">
-            <h2>{t.otIcuCare.contactUs}</h2>
+            <h2>
+              <span className="contact-title-line">{t.otIcuCare.contactUs}</span>
+              <span className="contact-division-line">{t.otIcuCare.nelloreDivision}</span>
+            </h2>
             <div className="contact-info-grid">
               <a
                 href={`${GOOGLE_MAPS_SEARCH_BASE}${encodeURIComponent(t.otIcuCare.address)}`}

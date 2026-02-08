@@ -4,6 +4,8 @@ import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection
 import { ParallaxSection } from '../components/ParallaxSection'
 import { useToast } from '../components/Toast'
 
+const GOOGLE_MAPS_SEARCH_BASE = 'https://www.google.com/maps/search/?api=1&query='
+
 export default function Contact() {
   const { t } = useI18n()
   const toast = useToast()
@@ -68,8 +70,12 @@ export default function Contact() {
         </div>
       </FadeIn>
 
-      {/* Contact Info Cards - Icon-as-Button Design */}
-      <StaggerContainer className="contact-info-grid">
+      {/* Section 1: Consultations — dark blue header */}
+      <div className="contact-page-section">
+        <div className="contact-section-header consultations">
+          <h2>{t.contact.sectionConsultations}</h2>
+        </div>
+        <StaggerContainer className="contact-info-grid">
         <a 
           href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" 
           target="_blank" 
@@ -172,8 +178,70 @@ export default function Contact() {
           </div>
         </div>
       </StaggerContainer>
+      </div>
 
-      {/* Google Maps Location */}
+      {/* Section 2: OT&ICU CARE — same olive green header + tile format as Contact Us on OT/ICU page */}
+      <div className="contact-page-section">
+        <div className="ot-icu-contact">
+          <div className="contact-content">
+            <h2>{t.contact.sectionOtIcuCare}</h2>
+            <div className="contact-info-grid">
+              <a
+                href={`${GOOGLE_MAPS_SEARCH_BASE}${encodeURIComponent(t.otIcuCare.address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card-modern contact-card-interactive"
+                title="Open in Google Maps"
+              >
+                <div className="contact-card-icon-button">
+                  <div className="icon-button-circle">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                  </div>
+                  <div className="icon-button-glow" />
+                </div>
+                <h3 className="contact-card-title">{t.otIcuCare.contactAddressLabel}</h3>
+                <div className="contact-card-content">
+                  <p>{t.otIcuCare.address}</p>
+                </div>
+                <div className="contact-card-action">
+                  <span>{t.contact.viewMaps}</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+              <a
+                href="tel:+917599307777"
+                className="contact-card-modern contact-card-interactive"
+              >
+                <div className="contact-card-icon-button">
+                  <div className="icon-button-circle">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <div className="icon-button-glow" />
+                </div>
+                <h3 className="contact-card-title">{t.otIcuCare.contactPhoneLabel}</h3>
+                <div className="contact-card-content">
+                  <p className="contact-highlight-text">{t.otIcuCare.phone}</p>
+                </div>
+                <div className="contact-card-action">
+                  <span>{t.contact.callNow}</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Find Us / Google Maps Location — entire section commented out
       <div style={{ marginTop: 60 }}>
         <FadeIn>
           <h2 className="section-heading">{t.contact.findUs}</h2>
@@ -212,6 +280,7 @@ export default function Contact() {
           </div>
         </ScaleIn>
       </div>
+      */}
 
       {/* Contact Form */}
       <div style={{ marginTop: 80 }}>
