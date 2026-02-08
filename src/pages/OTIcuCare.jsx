@@ -237,6 +237,7 @@ export default function OTIcuCare() {
                 <h3 className="contact-card-title">{t.otIcuCare.contactPhoneLabel}</h3>
                 <div className="contact-card-content">
                   <p className="contact-highlight-text">{t.otIcuCare.phone}</p>
+                  <p className="contact-note-text">{t.contact.phoneNote}</p>
                 </div>
                 <div className="contact-card-action">
                   <span>{t.contact.callNow}</span>
