@@ -5,6 +5,7 @@ import drRamaswamy from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_104
 import drJaheerBasha from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Jaheer Basha.jpg?format=webp&w=600&quality=80'
 import drPadmavathi from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Padmavathi.jpg?format=webp&w=600&quality=80'
 import drPushpika from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr.Pushpika.jpg?format=webp&w=600&quality=80'
+import drRasiVeeraiahGoud from '../assets/WhatsApp Image 2026-02-19 at 20.59.14.jpeg'
 
 export default function Doctors() {
   const { t } = useI18n()
@@ -49,6 +50,14 @@ export default function Doctors() {
       education: t.doctors.drPadmavathiEducation,
       specialties: [t.doctors.drPadmavathiSpec1, t.doctors.drPadmavathiSpec2],
       image: drPadmavathi
+    },
+    { 
+      name: t.doctors.drRasiVeeraiahGoudName,
+      specialty: t.doctors.drRasiVeeraiahGoudSpecialty,
+      bio: t.doctors.drRasiVeeraiahGoudBio,
+      education: t.doctors.drRasiVeeraiahGoudEducation,
+      specialties: [t.doctors.drRasiVeeraiahGoudSpec1, t.doctors.drRasiVeeraiahGoudSpec2],
+      image: drRasiVeeraiahGoud
     },
   ]
   
