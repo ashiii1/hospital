@@ -249,8 +249,6 @@ function App() {
               <div className="menu">
                 <a
                   href="https://thebluesinge.wixsite.com/beyond-treatment"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => setBlogsOpen(false)}
                 >
                   {t.nav.blogs || 'Blogs'}
@@ -282,8 +280,6 @@ function App() {
           <NavLink onClick={() => setMobileOpen(false)} to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
           <a
             href="https://thebluesinge.wixsite.com/beyond-treatment"
-            target="_blank"
-            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
           >
             {t.nav.blogs || 'Blogs'}
