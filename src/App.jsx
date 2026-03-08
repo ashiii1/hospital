@@ -18,9 +18,11 @@ function App() {
   const [locationMenuOpen, setLocationMenuOpen] = useState(false)
   const [whatsappOpen, setWhatsappOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [blogsOpen, setBlogsOpen] = useState(false)
   const locationMenuRef = useRef(null)
   const whatsappRef = useRef(null)
   const servicesRef = useRef(null)
+  const blogsRef = useRef(null)
   
   useEffect(() => {
     if (!locationMenuOpen) return
@@ -48,6 +50,15 @@ function App() {
     document.addEventListener('click', handleClickOutside)
     return () => document.removeEventListener('click', handleClickOutside)
   }, [servicesOpen])
+
+  useEffect(() => {
+    if (!blogsOpen) return
+    const handleClickOutside = (e) => {
+      if (blogsRef.current && !blogsRef.current.contains(e.target)) setBlogsOpen(false)
+    }
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [blogsOpen])
   
   const openKavaliMaps = () => {
     window.open('https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7', '_blank', 'noopener,noreferrer')
@@ -219,7 +230,36 @@ function App() {
             <NavLink to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>
             <NavLink to="/doctors" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.doctors}</NavLink>
             <NavLink to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
-            <NavLink to="/testimonials" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.testimonials}</NavLink>
+            <div
+              ref={blogsRef}
+              className={`dropdown ${blogsOpen ? 'open' : ''}`}
+            >
+              <button
+                type="button"
+                className={`dropdown-trigger ${pathname === '/testimonials' ? 'active' : ''}`}
+                aria-haspopup="true"
+                aria-expanded={blogsOpen}
+                onClick={() => setBlogsOpen((v) => !v)}
+              >
+                {t.nav.blogs || 'Blogs'}
+                <svg className="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div className="menu">
+                <a
+                  href="https://thebluesinge.wixsite.com/beyond-treatment"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setBlogsOpen(false)}
+                >
+                  {t.nav.blogs || 'Blogs'}
+                </a>
+                <Link to="/testimonials" onClick={() => setBlogsOpen(false)}>
+                  {t.nav.testimonials}
+                </Link>
+              </div>
+            </div>
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.contact}</NavLink>
           </nav>
           <button className="hamburger" onClick={() => setMobileOpen(v => !v)} aria-label="Open menu" aria-expanded={mobileOpen}>
@@ -240,6 +280,14 @@ function App() {
           <NavLink onClick={() => setMobileOpen(false)} to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/doctors" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.doctors}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
+          <a
+            href="https://thebluesinge.wixsite.com/beyond-treatment"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+          >
+            {t.nav.blogs || 'Blogs'}
+          </a>
           <NavLink onClick={() => setMobileOpen(false)} to="/testimonials" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.testimonials}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/contact" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.contact}</NavLink>
         </div>
