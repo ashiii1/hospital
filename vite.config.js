@@ -33,7 +33,7 @@ export default defineConfig({
     port: process.env.PORT || 4173,
     strictPort: false,
     allowedHosts: [
-      'ramaswamy-hospitals.onrender.com',
+      'Demo-hospitals.onrender.com',
       '.onrender.com', // Allow all Render subdomains
     ]
   }

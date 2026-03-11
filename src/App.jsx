@@ -88,7 +88,7 @@ function App() {
       <div className="topbar">
         <div className="topbar-content">
           <div className="topbar-left">
-            <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="topbar-logo" />
+            <img src={crestLogo} alt="Dr.Demo HOSPITALS" className="topbar-logo" />
             <div className="topbar-locations">
               <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-location-item topbar-address" aria-label="Kavali – Open in Google Maps">
                 <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -201,7 +201,7 @@ function App() {
       <header className="header" role="banner">
         <div className="header-content">
           <NavLink to="/" className="brand">
-            <img src={bannerLogo} alt="Dr.RAMASWAMY HOSPITALS" className="brand-banner-logo" />
+            <img src={bannerLogo} alt="Dr.Demo HOSPITALS" className="brand-banner-logo" />
           </NavLink>
           <nav className="nav" role="navigation" aria-label="Primary navigation">
             <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.home}</NavLink>
@@ -379,8 +379,8 @@ function App() {
           </div>
           <div className="links">
             <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noreferrer" aria-label="View on Google Maps">{t.footer.maps}</a>
-            <a href="https://linktr.ee/drramaswamyhospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
-            <a href="https://www.instagram.com/drramaswamyhospitals/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
+            <a href="https://linktr.ee/drDemohospitals" target="_blank" rel="noreferrer" aria-label="Visit our Linktree">{t.footer.linktree}</a>
+            <a href="https://www.instagram.com/drDemohospitals/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">{t.footer.instagram}</a>
           </div>
         </div>
         <div className="footer-credit">

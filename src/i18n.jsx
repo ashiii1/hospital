@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    brand: 'Dr.RAMASWAMY HOSPITALS',
+    brand: 'Dr.Demo HOSPITALS',
     nav: {
       home: 'Home',
       about: 'About',
@@ -70,7 +70,7 @@ export const translations = {
       patientsCured: 'Patients Cured',
       whyChoose: 'Why Choose Us',
       experiencedTeam: 'Experienced Team',
-      experiencedTeamDesc: 'At Dr. Ramaswamy Hospitals, our strength lies in our team of <strong>highly qualified and experienced medical professionals</strong> who are dedicated to delivering exceptional patient care. From skilled surgeons and specialized consultants to compassionate nurses and support staff, every member of our team works with commitment, precision, and empathy. With years of hands-on experience and continuous training, our experts ensure that each patient receives the highest standard of treatment, backed by advanced medical technology and personalized attention. Together, we strive to uphold our legacy of trust, care, and excellence in healthcare.',
+      experiencedTeamDesc: 'At Dr. Demo Hospitals, our strength lies in our team of <strong>highly qualified and experienced medical professionals</strong> who are dedicated to delivering exceptional patient care. From skilled surgeons and specialized consultants to compassionate nurses and support staff, every member of our team works with commitment, precision, and empathy. With years of hands-on experience and continuous training, our experts ensure that each patient receives the highest standard of treatment, backed by advanced medical technology and personalized attention. Together, we strive to uphold our legacy of trust, care, and excellence in healthcare.',
       emergency247: '24/7 Emergency Care',
       emergency247Desc: 'Our emergency team is <strong>always ready—day or night—</strong>to provide swift, expert care when it matters most. With skilled doctors, trained nurses, and advanced facilities, we\'re here every moment to save lives and support patients in critical times.',
       patientCentered: 'Patient Centred Approach',
@@ -119,16 +119,16 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      intro1: 'Dr. Ramaswamy Hospitals is <strong>Kavali\'s first Super Speciality Hospital</strong>, founded by <strong>Dr. Manchikanti Ramaswamy</strong>. With 25+ years of trusted service, we\'ve introduced many healthcare firsts — from advanced ICUs and dialysis care to 24/7 medical support. Guided by strong ethics and compassion, we continue our mission to provide <strong>quality, affordable, and patient-focused care</strong> to every individual who walks through our doors.',
+      intro1: 'Dr. Demo Hospitals is <strong>Kavali\'s first Super Speciality Hospital</strong>, founded by <strong>Dr. Manchikanti Demo</strong>. With 25+ years of trusted service, we\'ve introduced many healthcare firsts — from advanced ICUs and dialysis care to 24/7 medical support. Guided by strong ethics and compassion, we continue our mission to provide <strong>quality, affordable, and patient-focused care</strong> to every individual who walks through our doors.',
       intro2: '',
       mission: 'Our Mission',
-      missionText: 'At Dr. Ramaswamy Hospitals, our motto is <strong>"To care and to cure."</strong> We are committed to providing <strong>high-quality, affordable healthcare</strong> for everyone. Our focus is on delivering <strong>advanced medical care</strong>, ensuring safety, comfort, and excellence. We value every patient\'s trust and feedback as we continue to improve our services. With <strong>ethics and empathy</strong> at our core, we strive to be the most trusted healthcare partner for families in Kavali and beyond.',
+      missionText: 'At Dr. Demo Hospitals, our motto is <strong>"To care and to cure."</strong> We are committed to providing <strong>high-quality, affordable healthcare</strong> for everyone. Our focus is on delivering <strong>advanced medical care</strong>, ensuring safety, comfort, and excellence. We value every patient\'s trust and feedback as we continue to improve our services. With <strong>ethics and empathy</strong> at our core, we strive to be the most trusted healthcare partner for families in Kavali and beyond.',
       vision: 'Vision',
       visionText: 'To be the <strong>leading healthcare provider</strong> in the region, recognized for <strong>exceptional medical care, promising service</strong>, and our commitment to <strong>improving community health</strong> through quality treatment and health awareness initiatives.',
       motto: 'Motto',
       mottoText: 'Our hospital\'s motto is <strong>"Care and Cure."</strong> We are dedicated to providing <strong>high-quality healthcare</strong> to every patient, offering <strong>the best support</strong> to those in need, and continuously improving our services based on patient feedback.',
       leadership: 'Leadership Team',
-      founderName: 'Dr. Manchikanti Ramaswamy',
+      founderName: 'Dr. Manchikanti Demo',
       founderTitle: 'Founder & CEO',
       founderEducation: 'M.B.B.S, M.S., M.Ch. (Ortho)',
       founderBio: 'Kavali\'s very first <strong>Orthopaedic Surgeon</strong>, with over <strong>50,000 successful surgeries</strong> to his name, he has dedicated his life to restoring mobility and transforming lives. Guided by the timeless words of his mentor, <strong>Dr. SSK Marthandam</strong>, he lives by a principle that continues to inspire our entire team: <strong>"Don\'t run behind money — work with such dedication that money runs behind you."</strong> His message to every member of our hospital family remains simple yet profound — "Live with ethics, values, and relationships."',
@@ -139,7 +139,7 @@ export const translations = {
       rakshanaName: 'Mrs. Manchikanti Rakshana Sowrav',
       rakshanaTitle: 'Director of Operations',
       rakshanaEducation: 'B. Com A&F ; Fashion Designing',
-      rakshanaBio: 'Rakshana oversees the operational and digital presence of Dr. Ramaswamy Hospitals. With a focus on <strong>efficiency, innovation, and patient engagement</strong>, she ensures that the hospital\'s services run seamlessly while <strong>strengthening its online visibility</strong>. Through her leadership in digital marketing and operations, she plays a key role in connecting <strong>the hospital\'s mission of compassionate, quality healthcare</strong> with the community it serves.',
+      rakshanaBio: 'Rakshana oversees the operational and digital presence of Dr. Demo Hospitals. With a focus on <strong>efficiency, innovation, and patient engagement</strong>, she ensures that the hospital\'s services run seamlessly while <strong>strengthening its online visibility</strong>. Through her leadership in digital marketing and operations, she plays a key role in connecting <strong>the hospital\'s mission of compassionate, quality healthcare</strong> with the community it serves.',
       stat1Label: 'Successful Surgeries',
       stat2Label: 'Years of Care',
       stat3Label: 'Patients Cured',
@@ -161,7 +161,7 @@ export const translations = {
       value3Desc: 'We continuously invest in advanced medical technology and stay updated with the latest healthcare innovations.',
       value4Title: 'Integrity',
       value4Desc: 'We maintain transparency and honesty in all our interactions, building trust with patients and their families.',
-      heroCaption: 'Dr.RAMASWAMY HOSPITALS - Serving the community since 1999'
+      heroCaption: 'Dr.Demo HOSPITALS - Serving the community since 1999'
     },
     services: {
       title: 'Our Services',
@@ -173,7 +173,7 @@ export const translations = {
       generalMedicine: 'General Medicine',
       generalMedicineDesc: 'General Medicine department run by Dr.Pushpika is equipped with ECG, ECHO, equibilator, inotropic syringe pumps, ventilators, succession tubes, with all ICU facilities to cure emergencies, our present physician in good at handling Cardiac, cerebral cases, all pulmonary cases, all types of fevers and chronic diseases like diabeties, hypertension and thyroid.',
       orthopedics: 'Orthopedics',
-      orthopedicsDesc: 'Our main branch is Orthopedics run by Dr. Ramaswamy with 25 years+ experience who does Trauma, Replacements, Spine Surgeries, Revision Replacements, Orthopedic bone tumors and surgeries, tendon transplants, flap closures, shoulder scopies, knee scopies, shoulder replacements, and all types of paediatric ortho surgeries, deformity corrections and abdomen.',
+      orthopedicsDesc: 'Our main branch is Orthopedics run by Dr. Demo with 25 years+ experience who does Trauma, Replacements, Spine Surgeries, Revision Replacements, Orthopedic bone tumors and surgeries, tendon transplants, flap closures, shoulder scopies, knee scopies, shoulder replacements, and all types of paediatric ortho surgeries, deformity corrections and abdomen.',
       urology: 'Urology',
       urologyDesc: 'Specialized care for urinary tract and male reproductive system conditions with state-of-the-art diagnostic and treatment facilities.',
       generalSurgery: 'General Surgery',
@@ -203,13 +203,13 @@ export const translations = {
       videoTitle: 'Patient Testimonial Video',
       videoSubtitle: 'Click to watch patient experiences',
       realStories: 'Real Stories, Real Care',
-      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.RAMASWAMY HOSPITALS.',
+      realStoriesDesc: 'Watch our patients share their journey to recovery and the compassionate care they received at Dr.Demo HOSPITALS.',
       feature1: 'Real patient experiences',
       feature2: 'Authentic testimonials',
       feature3: 'Healthcare success stories',
       whatPatientsSay: 'What Our Patients Say',
       patient1Name: 'Rajesh Kumar',
-      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.RAMASWAMY HOSPITALS.',
+      patient1Quote: 'The care I received was exceptional and the staff was incredibly compassionate. I am very grateful for the treatment at Dr.Demo HOSPITALS.',
       patient1Location: 'Kavali',
       patient2Name: 'Lakshmi Devi',
       patient2Quote: 'The doctors here are highly skilled and took the time to explain everything. Excellent hospital with modern facilities.',
@@ -229,7 +229,7 @@ export const translations = {
       // FAQ Section
       faqTitle: 'Frequently Asked Questions',
       faqSubtitle: 'Find answers to common questions about our services and facilities',
-      faq1Question: 'What specialties are available at Dr. Ramaswamy Hospitals?',
+      faq1Question: 'What specialties are available at Dr. Demo Hospitals?',
       faq1Answer: 'We offer a wide range of specialties including Orthopedics, General Medicine, General Surgery, Urology, Nephrology. Our multi-speciality setup ensures that patients receive comprehensive and coordinated care under one roof.',
       faq2Question: 'Do you offer emergency and 24/7 services?',
       faq2Answer: 'Yes, our hospital provides round-the-clock emergency services, supported by an experienced team of doctors, nurses, and technicians.',
@@ -266,7 +266,7 @@ export const translations = {
       
       // Achievement 1: MSMCH
       msmchTitle: 'First MSMCH Ortho in Kavali',
-      msmchDesc: 'Dr. Ramaswamy Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.',
+      msmchDesc: 'Dr. Demo Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.',
       
       // Achievement 2: THR 2005
       thr2005Title: 'First Total Hip Replacement (THR) in Kavali - 2005',
@@ -306,7 +306,7 @@ export const translations = {
       
       // Achievement 11: Surgical Volume
       surgicalVolumeTitle: 'High Surgical Volume - 130 to 150 Surgeries Monthly',
-      surgicalVolumeDesc: 'With an average of 130–150 surgeries every month, Dr. Ramaswamy Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community, as well as the consistency, skill, and dedication of our surgical and nursing teams.',
+      surgicalVolumeDesc: 'With an average of 130–150 surgeries every month, Dr. Demo Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community, as well as the consistency, skill, and dedication of our surgical and nursing teams.',
       
       // Achievement 12: Paediatric Trauma
       paediatricTraumaTitle: 'Specialized Paediatric Trauma Care',
@@ -402,13 +402,13 @@ export const translations = {
     doctors: {
       title: 'Our Doctors',
       subtitle: 'Meet our experienced team of medical professionals dedicated to providing exceptional healthcare services.',
-      // Dr. Ramaswamy
-      drRamaswamyName: 'Dr. M. Ramaswamy',
-      drRamaswamySpecialty: 'Orthopaedic Surgeon',
-      drRamaswamyBio: 'Founder & CEO of Dr. Ramaswamy Hospitals, dedicated to restoring mobility and transforming lives.',
-      drRamaswamyEducation: 'M.B.B.S, M.S., M.Ch. (Ortho)',
-      drRamaswamySpec1: 'Orthopaedic Surgery',
-      drRamaswamySpec2: 'Joint Replacement',
+      // Dr. Demo
+      drDemoName: 'Dr. M. Demo',
+      drDemoSpecialty: 'Orthopaedic Surgeon',
+      drDemoBio: 'Founder & CEO of Dr. Demo Hospitals, dedicated to restoring mobility and transforming lives.',
+      drDemoEducation: 'M.B.B.S, M.S., M.Ch. (Ortho)',
+      drDemoSpec1: 'Orthopaedic Surgery',
+      drDemoSpec2: 'Joint Replacement',
       // Dr. Pushpika
       drPushpikaName: 'Dr. Pushpika',
       drPushpikaSpecialty: 'DNB Family Medicine',
@@ -447,7 +447,7 @@ export const translations = {
       bookConsultation: 'Book a Consultation',
       bookConsultationText: 'Schedule an appointment with our experienced doctors. We are here to provide you with the best medical care.',
       ctaTitle: 'Interested in Joining Our Team? Contact Us',
-      ctaText: 'Send your resumes to ramaswamyhospitals@gmail.com or Call +91 7824055789 for more details.',
+      ctaText: 'Send your resumes to Demohospitals@gmail.com or Call +91 7824055789 for more details.',
       emailResume: 'Email Resume',
       callNow: 'Call Now',
       whyChoose: 'Why Choose Our Doctors',
@@ -545,7 +545,7 @@ export const translations = {
       speciality11: 'Varicose veins',
       lookingFor: 'Looking For OT & ICU Care?',
       lookingForSubtitle: 'A collaborative plug and play concept enabled for consulting Surgeons and Physicians',
-      description: 'At Dr. Ramaswamy Hospitals – OT & ICU, we provide a safe, fully equipped surgical ecosystem where patients receive quality care and doctors practice with confidence.',
+      description: 'At Dr. Demo Hospitals – OT & ICU, we provide a safe, fully equipped surgical ecosystem where patients receive quality care and doctors practice with confidence.',
       feature1: 'Modern Operation Theatres',
       feature2: 'Well-equipped Intensive Care Units',
       feature3: 'Experienced Medical & Nursing Team',
@@ -725,7 +725,7 @@ export const translations = {
       value3Desc: 'మేము అధునాతన వైద్య సాంకేతికతలో నిరంతరం పెట్టుబడి పెడుతూ, తాజా ఆరోగ్య సంరక్షణ ఆవిష్కరణలతో నవీకరించబడి ఉంటాము.',
       value4Title: 'సమగ్రత',
       value4Desc: 'మేము మా అన్ని పరస్పర చర్యలలో పారదర్శకత మరియు నిజాయితీని కొనసాగిస్తాము, రోగులు మరియు వారి కుటుంబాలతో నమ్మకాన్ని నిర్మిస్తాము.',
-      heroCaption: 'Dr.RAMASWAMY HOSPITALS - 1999 నుండి సమాజానికి సేవ చేస్తోంది'
+      heroCaption: 'Dr.Demo HOSPITALS - 1999 నుండి సమాజానికి సేవ చేస్తోంది'
     },
     services: {
       title: 'మా సేవలు',
@@ -967,12 +967,12 @@ export const translations = {
       title: 'మా వైద్యులు',
       subtitle: 'అసాధారణమైన ఆరోగ్య సంరక్షణ సేవలను అందించడానికి అంకితమైన మా అనుభవజ్ఞులైన వైద్య నిపుణుల బృందాన్ని కలవండి.',
       // డా. రామస్వామి
-      drRamaswamyName: 'డా. ఎం. రామస్వామి',
-      drRamaswamySpecialty: 'ఎం.బి., బి.ఎస్., ఎం.ఎస్., ఎం.చ్ (ఆర్థో)',
-      drRamaswamyBio: '50,000 కి పైగా విజయవంతమైన శస్త్రచికిత్సలతో కావలి యొక్క మొదటి ఆర్థోపెడిక్ సర్జన్. డా. రామస్వామి హాస్పిటల్స్ వ్యవస్థాపకుడు & CEO, చలనశీలతను పునరుద్ధరించడానికి మరియు జీవితాలను మార్చడానికి అంకితం చేశారు.',
-      drRamaswamyEducation: 'ఎం.బి., బి.ఎస్., ఎం.ఎస్., ఎం.చ్ (ఆర్థో)',
-      drRamaswamySpec1: 'ఆర్థోపెడిక్ సర్జరీ',
-      drRamaswamySpec2: 'కీళ్ళ మార్పిడి',
+      drDemoName: 'డా. ఎం. రామస్వామి',
+      drDemoSpecialty: 'ఎం.బి., బి.ఎస్., ఎం.ఎస్., ఎం.చ్ (ఆర్థో)',
+      drDemoBio: '50,000 కి పైగా విజయవంతమైన శస్త్రచికిత్సలతో కావలి యొక్క మొదటి ఆర్థోపెడిక్ సర్జన్. డా. రామస్వామి హాస్పిటల్స్ వ్యవస్థాపకుడు & CEO, చలనశీలతను పునరుద్ధరించడానికి మరియు జీవితాలను మార్చడానికి అంకితం చేశారు.',
+      drDemoEducation: 'ఎం.బి., బి.ఎస్., ఎం.ఎస్., ఎం.చ్ (ఆర్థో)',
+      drDemoSpec1: 'ఆర్థోపెడిక్ సర్జరీ',
+      drDemoSpec2: 'కీళ్ళ మార్పిడి',
       // డా. పుష్పికా
       drPushpikaName: 'డా. పుష్పికా',
       drPushpikaSpecialty: 'DNB ఫ్యామిలీ మెడిసిన్',
@@ -1011,7 +1011,7 @@ export const translations = {
       bookConsultation: 'సంప్రదింపు బుక్ చేయండి',
       bookConsultationText: 'మా అనుభవజ్ఞులైన వైద్యులతో అపాయింట్‌మెంట్ షెడ్యూల్ చేయండి. ఉత్తమ వైద్య సంరక్షణ అందించడానికి మేము ఇక్కడ ఉన్నాము.',
       ctaTitle: 'మా బృందంలో చేరడానికి ఆసక్తి ఉందా? మమ్మల్ని సంప్రదించండి',
-      ctaText: 'మీ రెజ్యూమ్‌లను ramaswamyhospitals@gmail.com కు పంపండి లేదా మరిన్ని వివరాల కోసం +91 7824055789 కు కాల్ చేయండి.',
+      ctaText: 'మీ రెజ్యూమ్‌లను Demohospitals@gmail.com కు పంపండి లేదా మరిన్ని వివరాల కోసం +91 7824055789 కు కాల్ చేయండి.',
       emailResume: 'రెజ్యూమ్ ఇమెయిల్ చేయండి',
       callNow: 'ఇప్పుడే కాల్ చేయండి',
       whyChoose: 'మా వైద్యులను ఎందుకు ఎంచుకోవాలి',

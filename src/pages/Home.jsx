@@ -22,7 +22,7 @@ export default function Home() {
   const achievementCards = [
     { 
       title: t.achievements?.msmchTitle || 'First MSMCH Ortho in Kavali',
-      description: t.achievements?.msmchDesc || 'Dr. Ramaswamy Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.'
+      description: t.achievements?.msmchDesc || 'Dr. Demo Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.'
     },
     { 
       title: t.achievements?.thr2005Title || 'First Total Hip Replacement (THR) in Kavali - 2005',
@@ -38,7 +38,7 @@ export default function Home() {
     },
     { 
       title: t.achievements?.surgicalVolumeTitle || 'High Surgical Volume - 130 to 150 Surgeries Monthly',
-      description: t.achievements?.surgicalVolumeDesc || 'With an average of 130–150 surgeries every month, Dr. Ramaswamy Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community.'
+      description: t.achievements?.surgicalVolumeDesc || 'With an average of 130–150 surgeries every month, Dr. Demo Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community.'
     },
     { 
       title: t.achievements?.tumourProceduresTitle || 'Comprehensive Tumour Procedures',
@@ -340,7 +340,7 @@ export default function Home() {
         <div className="home-leader-section">
           <div className="home-leader-card">
             <div className="home-leader-image">
-              <img src={leaderImage} alt="Dr. Ramaswamy" />
+              <img src={leaderImage} alt="Dr. Demo" />
             </div>
             <div className="home-leader-content">
               <h3>{t.about.founderName}</h3>
@@ -569,7 +569,7 @@ export default function Home() {
             {/* Instagram Widget - Desktop Only */}
             <div className="instagram-embed-wrapper instagram-desktop-only">
               <iframe
-                src="https://www.instagram.com/drramaswamyhospitals/embed/"
+                src="https://www.instagram.com/drDemohospitals/embed/"
                 width="100%"
                 height="480"
                 frameBorder="0"
@@ -583,7 +583,7 @@ export default function Home() {
             {/* Instagram Preview Card - Mobile Only */}
             <div className="instagram-embed-wrapper instagram-mobile-only">
               <a 
-                href="https://www.instagram.com/drramaswamyhospitals/" 
+                href="https://www.instagram.com/drDemohospitals/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="instagram-preview-card"
@@ -596,7 +596,7 @@ export default function Home() {
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                     </svg>
                   </div>
-                  <h3>@drramaswamyhospitals</h3>
+                  <h3>@drDemohospitals</h3>
                   <p>{t.home.instagramPreviewText || 'View our latest posts, health tips, and hospital updates on Instagram'}</p>
                   <div className="instagram-preview-badge">
                     <span>📸 {t.home.viewOnInstagram || 'View on Instagram'}</span>
@@ -607,7 +607,7 @@ export default function Home() {
             
             <div className="social-corner-cta">
               <a 
-                href="https://www.instagram.com/drramaswamyhospitals/" 
+                href="https://www.instagram.com/drDemohospitals/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="instagram-follow-btn"
@@ -631,7 +631,7 @@ export default function Home() {
               </a>
               
               <a 
-                href="https://www.linkedin.com/company/ramaswamy-hospitals/" 
+                href="https://www.linkedin.com/company/Demo-hospitals/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="linkedin-follow-btn"

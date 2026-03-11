@@ -5,64 +5,64 @@ export default function SEOMetaTags() {
   const location = useLocation()
   
   useEffect(() => {
-    const baseUrl = 'https://www.ramaswamyhospitals.com'
+    const baseUrl = 'https://www.Demohospitals.com'
     
     // Define SEO data for each route
     const seoData = {
       '/': {
-        title: 'Dr.Ramaswamy Hospitals | Home',
-        description: 'Dr.Ramaswamy Hospitals - Kavali\'s first Super Speciality Hospital. Leading hospitals in Kavali with 25+ years of trusted healthcare. Best Kavali ortho hospital, 24/7 emergency, ICU, dialysis services in Kavali, Nellore.',
-        keywords: 'hospitals in kavali, kavali super speciality hospital, kavali ortho hospital, orthopedic hospital kavali, best hospital in kavali, multi specialty hospital kavali, dialysis center kavali, ICU kavali, emergency hospital kavali, ramaswamy hospitals kavali, dr ramaswamy hospitals, hospital kavali nellore, super speciality hospital nellore',
-        ogTitle: 'Dr.Ramaswamy Hospitals | Kavali Super Speciality Hospital',
+        title: 'Dr.Demo Hospitals | Home',
+        description: 'Dr.Demo Hospitals - Kavali\'s first Super Speciality Hospital. Leading hospitals in Kavali with 25+ years of trusted healthcare. Best Kavali ortho hospital, 24/7 emergency, ICU, dialysis services in Kavali, Nellore.',
+        keywords: 'hospitals in kavali, kavali super speciality hospital, kavali ortho hospital, orthopedic hospital kavali, best hospital in kavali, multi specialty hospital kavali, dialysis center kavali, ICU kavali, emergency hospital kavali, Demo hospitals kavali, dr Demo hospitals, hospital kavali nellore, super speciality hospital nellore',
+        ogTitle: 'Dr.Demo Hospitals | Kavali Super Speciality Hospital',
         ogDescription: 'Kavali\'s first Super Speciality Hospital. Leading hospitals in Kavali with 25+ years of trusted healthcare. Best Kavali ortho hospital, 24/7 emergency, ICU, dialysis.',
       },
       '/about': {
-        title: 'Dr.Ramaswamy Hospitals | About Us',
-        description: 'Learn about Dr.Ramaswamy Hospitals - Kavali\'s first Super Speciality Hospital. Leading hospitals in Kavali with 25+ years of excellence. Best Kavali ortho hospital with 50,000+ successful surgeries.',
-        keywords: 'hospitals in kavali, kavali super speciality hospital, kavali ortho hospital, about ramaswamy hospitals, best hospital in kavali, hospital kavali history',
-        ogTitle: 'About Us | Dr.Ramaswamy Hospitals',
+        title: 'Dr.Demo Hospitals | About Us',
+        description: 'Learn about Dr.Demo Hospitals - Kavali\'s first Super Speciality Hospital. Leading hospitals in Kavali with 25+ years of excellence. Best Kavali ortho hospital with 50,000+ successful surgeries.',
+        keywords: 'hospitals in kavali, kavali super speciality hospital, kavali ortho hospital, about Demo hospitals, best hospital in kavali, hospital kavali history',
+        ogTitle: 'About Us | Dr.Demo Hospitals',
         ogDescription: 'Kavali\'s first Super Speciality Hospital with 25+ years of excellence. Leading hospitals in Kavali with 50,000+ successful surgeries.',
       },
       '/services': {
-        title: 'Dr.Ramaswamy Hospitals | Services',
+        title: 'Dr.Demo Hospitals | Services',
         description: 'Comprehensive medical services at Kavali\'s best Super Speciality Hospital. Orthopedic surgery, nephrology, general medicine, ICU, dialysis, emergency care in Kavali, Nellore.',
         keywords: 'hospitals in kavali, kavali super speciality hospital, kavali ortho hospital, orthopedic services kavali, medical services kavali, hospital services nellore',
-        ogTitle: 'Medical Services | Dr.Ramaswamy Hospitals',
+        ogTitle: 'Medical Services | Dr.Demo Hospitals',
         ogDescription: 'Comprehensive medical services at Kavali\'s best Super Speciality Hospital. Orthopedic surgery, nephrology, ICU, dialysis, emergency care.',
       },
       '/doctors': {
-        title: 'Dr.Ramaswamy Hospitals | Doctors',
-        description: 'Meet the best doctors in Kavali at Dr.Ramaswamy Hospitals. Experienced orthopedic surgeon, nephrologist, and specialists. Leading hospitals in Kavali with expert medical team.',
+        title: 'Dr.Demo Hospitals | Doctors',
+        description: 'Meet the best doctors in Kavali at Dr.Demo Hospitals. Experienced orthopedic surgeon, nephrologist, and specialists. Leading hospitals in Kavali with expert medical team.',
         keywords: 'best doctors in kavali, orthopedic surgeon kavali, doctors kavali, kavali super speciality hospital doctors, hospital doctors nellore',
-        ogTitle: 'Best Doctors in Kavali | Dr.Ramaswamy Hospitals',
+        ogTitle: 'Best Doctors in Kavali | Dr.Demo Hospitals',
         ogDescription: 'Meet the best doctors in Kavali. Experienced orthopedic surgeon, nephrologist, and specialists at Kavali\'s leading Super Speciality Hospital.',
       },
       '/facilities': {
-        title: 'Dr.Ramaswamy Hospitals | Facilities',
+        title: 'Dr.Demo Hospitals | Facilities',
         description: 'State-of-the-art hospital facilities in Kavali. Advanced ICU, dialysis center, operation theatres, digital X-ray, laboratory. Best Kavali super speciality hospital facilities.',
         keywords: 'hospital facilities kavali, ICU kavali, dialysis center kavali, hospital equipment kavali, kavali super speciality hospital facilities',
-        ogTitle: 'Hospital Facilities | Dr.Ramaswamy Hospitals',
+        ogTitle: 'Hospital Facilities | Dr.Demo Hospitals',
         ogDescription: 'State-of-the-art hospital facilities in Kavali. Advanced ICU, dialysis center, operation theatres, digital X-ray, laboratory.',
       },
       '/achievements': {
-        title: 'Dr.Ramaswamy Hospitals | Achievements',
+        title: 'Dr.Demo Hospitals | Achievements',
         description: 'Medical achievements of Kavali\'s first Super Speciality Hospital. First MSMCH ortho in Kavali, first hip replacement, knee replacement. Leading Kavali ortho hospital achievements.',
         keywords: 'kavali ortho hospital, kavali super speciality hospital achievements, first hospital kavali, orthopedic achievements kavali',
-        ogTitle: 'Medical Achievements | Dr.Ramaswamy Hospitals',
+        ogTitle: 'Medical Achievements | Dr.Demo Hospitals',
         ogDescription: 'Medical achievements of Kavali\'s first Super Speciality Hospital. First MSMCH ortho, hip replacement, knee replacement in Kavali.',
       },
       '/testimonials': {
-        title: 'Dr.Ramaswamy Hospitals | Testimonials',
+        title: 'Dr.Demo Hospitals | Testimonials',
         description: 'Read patient reviews and testimonials from Kavali\'s best Super Speciality Hospital. Trusted hospitals in Kavali with excellent patient feedback. Best Kavali ortho hospital reviews.',
         keywords: 'hospitals in kavali reviews, kavali super speciality hospital reviews, patient reviews kavali, hospital testimonials kavali',
-        ogTitle: 'Patient Reviews | Dr.Ramaswamy Hospitals',
+        ogTitle: 'Patient Reviews | Dr.Demo Hospitals',
         ogDescription: 'Read patient reviews from Kavali\'s best Super Speciality Hospital. Trusted hospitals in Kavali with excellent patient feedback.',
       },
       '/contact': {
-        title: 'Dr.Ramaswamy Hospitals | Contact',
-        description: 'Contact Dr.Ramaswamy Hospitals - Kavali\'s first Super Speciality Hospital. Location, phone, email. Leading hospitals in Kavali, Nellore. Emergency: +91 99127 57854',
+        title: 'Dr.Demo Hospitals | Contact',
+        description: 'Contact Dr.Demo Hospitals - Kavali\'s first Super Speciality Hospital. Location, phone, email. Leading hospitals in Kavali, Nellore. Emergency: +91 99127 57854',
         keywords: 'hospitals in kavali contact, kavali super speciality hospital contact, hospital kavali phone, hospital kavali address',
-        ogTitle: 'Contact Us | Dr.Ramaswamy Hospitals',
+        ogTitle: 'Contact Us | Dr.Demo Hospitals',
         ogDescription: 'Contact Kavali\'s first Super Speciality Hospital. Location, phone, email. Emergency: +91 99127 57854',
       },
     }

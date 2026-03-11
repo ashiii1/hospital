@@ -7,7 +7,7 @@ export default function CanonicalTag() {
   
   useEffect(() => {
     // Get the base URL
-    const baseUrl = 'https://www.ramaswamyhospitals.com'
+    const baseUrl = 'https://www.Demohospitals.com'
     
     // Normalize pathname - remove trailing slash except for homepage
     let pathname = location.pathname

@@ -1,11 +1,11 @@
-# robots.txt for Dr.Ramaswamy Hospitals
+# robots.txt for Dr.Demo Hospitals
 # Allow all search engines to crawl everything
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.ramaswamyhospitals.com/sitemap.xml
+Sitemap: https://www.Demohospitals.com/sitemap.xml
 
 # Specific search engines
 User-agent: Googlebot

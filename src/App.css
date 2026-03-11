@@ -12202,7 +12202,7 @@ body {
 .ot-icu-hero-text-stagger.animate-in > .ot-icu-tagline { animation-delay: 0.5s; }
 .ot-icu-hero-text-stagger.animate-in > .ot-icu-quote { animation-delay: 0.65s; }
 
-/* Logo — right of text; top aligned with "Dr. Ramaswamy Hospitals", height spans to subtitle */
+/* Logo — right of text; top aligned with "Dr. Demo Hospitals", height spans to subtitle */
 .ot-icu-hero-logo {
   flex-shrink: 0;
   align-self: flex-start;

@@ -59,8 +59,8 @@ export default function About() {
   ]
 
   const galleryImages = [
-    { src: hospitalExterior, alt: "Hospital Building", caption: "Dr. Ramaswamy Hospitals - Kavali" },
-    { src: facility1, alt: "Hospital Exterior", caption: "Dr. Ramaswamy Hospitals - Main Building" },
+    { src: hospitalExterior, alt: "Hospital Building", caption: "Dr. Demo Hospitals - Kavali" },
+    { src: facility1, alt: "Hospital Exterior", caption: "Dr. Demo Hospitals - Main Building" },
     { src: facility2, alt: "Reception Area", caption: "Modern Reception & Waiting Area" },
     { src: facility3, alt: "Patient Care", caption: "Patient Care Excellence" },
     { src: facility4, alt: "Medical Equipment", caption: "State-of-the-Art Medical Equipment" },
@@ -135,7 +135,7 @@ export default function About() {
           <div className="about-hero-image animated-hospital-image">
             <div className="about-hero-image-pattern"></div>
             <div className="image-glow-effect"></div>
-            <img src={hospitalExterior} alt="Dr.RAMASWAMY HOSPITALS - Main Building" className="hospital-building-img" />
+            <img src={hospitalExterior} alt="Dr.Demo HOSPITALS - Main Building" className="hospital-building-img" />
             <div className="about-hero-image-caption">{t.about.heroCaption}</div>
           </div>
         </ScaleIn>

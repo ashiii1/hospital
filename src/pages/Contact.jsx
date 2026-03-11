@@ -45,13 +45,13 @@ export default function Contact() {
       name: t.contact.instagram, 
       desc: t.contact.instagramText,
       icon: "IG",
-      url: "https://www.instagram.com/drramaswamyhospitals/"
+      url: "https://www.instagram.com/drDemohospitals/"
     },
     { 
       name: t.contact.linktree, 
       desc: t.contact.linktreeText,
       icon: "LT",
-      url: "https://linktr.ee/drramaswamyhospitals"
+      url: "https://linktr.ee/drDemohospitals"
     },
     { 
       name: t.contact.whatsapp, 
@@ -131,7 +131,7 @@ export default function Contact() {
         </a>
 
         <a 
-          href="mailto:ramaswamyhospitals@gmail.com" 
+          href="mailto:Demohospitals@gmail.com" 
           className="contact-card-modern contact-card-interactive"
         >
           <div className="contact-card-icon-button">
@@ -145,7 +145,7 @@ export default function Contact() {
           </div>
           <h3 className="contact-card-title">{t.contact.email}</h3>
           <div className="contact-card-content">
-            <p className="contact-highlight-text">ramaswamyhospitals@gmail.com</p>
+            <p className="contact-highlight-text">Demohospitals@gmail.com</p>
           </div>
           <div className="contact-card-action">
             <span>Send Email</span>
@@ -251,7 +251,7 @@ export default function Contact() {
         <ScaleIn>
           <div className="contact-map-container">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.365608313749!2d79.99258227511231!3d14.916710635607961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7b00746144d3%3A0xcf848a03971ed931!2sRamaswamy%20hospitals!5e0!3m2!1sen!2sin!4v1762184843111!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.365608313749!2d79.99258227511231!3d14.916710635607961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7b00746144d3%3A0xcf848a03971ed931!2sDemo%20hospitals!5e0!3m2!1sen!2sin!4v1762184843111!5m2!1sen!2sin" 
               width="100%"
               height="500"
               frameBorder="0"
@@ -260,7 +260,7 @@ export default function Contact() {
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
               className="contact-map-iframe"
-              title="Dr. Ramaswamy Hospitals Location"
+              title="Dr. Demo Hospitals Location"
               aria-label="Hospital location map"
               allow="geolocation"
             ></iframe>

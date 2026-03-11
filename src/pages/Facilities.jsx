@@ -48,7 +48,7 @@ export default function Facilities() {
   const { t } = useI18n()
   
   const galleryImages = [
-    { src: facility1, alt: "Hospital Exterior", caption: "Dr. Ramaswamy Hospitals - Main Building" },
+    { src: facility1, alt: "Hospital Exterior", caption: "Dr. Demo Hospitals - Main Building" },
     { src: facility2, alt: "Reception Area", caption: "Modern Reception & Waiting Area" },
     { src: facility3, alt: "Patient Care", caption: "Patient Care Excellence" },
     { src: facility4, alt: "Medical Equipment", caption: "State-of-the-Art Medical Equipment" },

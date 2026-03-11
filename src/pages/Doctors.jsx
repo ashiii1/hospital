@@ -1,7 +1,7 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
-import drRamaswamy from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Ramaswamy 1.jpg?format=webp&w=600&quality=80'
+import drDemo from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Demo 1.jpg?format=webp&w=600&quality=80'
 import drJaheerBasha from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Jaheer Basha.jpg?format=webp&w=600&quality=80'
 import drPadmavathi from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr. Padmavathi.jpg?format=webp&w=600&quality=80'
 import drPushpika from '../assets/wetransfer_dr-jaheer-basha-jpg_2025-10-19_1041/Dr.Pushpika.jpg?format=webp&w=600&quality=80'
@@ -12,12 +12,12 @@ export default function Doctors() {
   
   const doctors = [
     { 
-      name: t.doctors.drRamaswamyName,
-      specialty: t.doctors.drRamaswamySpecialty,
-      bio: t.doctors.drRamaswamyBio,
-      education: t.doctors.drRamaswamyEducation,
-      specialties: [t.doctors.drRamaswamySpec1, t.doctors.drRamaswamySpec2],
-      image: drRamaswamy
+      name: t.doctors.drDemoName,
+      specialty: t.doctors.drDemoSpecialty,
+      bio: t.doctors.drDemoBio,
+      education: t.doctors.drDemoEducation,
+      specialties: [t.doctors.drDemoSpec1, t.doctors.drDemoSpec2],
+      image: drDemo
     },
     { 
       name: t.doctors.drPushpikaName,
@@ -148,7 +148,7 @@ export default function Doctors() {
           <h2>{t.doctors.ctaTitle}</h2>
           <p>{t.doctors.ctaText}</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="mailto:ramaswamyhospitals@gmail.com" className="btn btn-large">{t.doctors.emailResume}</a>
+            <a href="mailto:Demohospitals@gmail.com" className="btn btn-large">{t.doctors.emailResume}</a>
             <a href="tel:+917824055789" className="btn btn-large">{t.doctors.callNow}</a>
           </div>
         </div>

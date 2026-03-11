@@ -73,14 +73,14 @@ export default function OTIcuCare() {
             />
           </svg>
 
-          {/* Hero Content — row: text left, logo right (logo top = Dr. Ramaswamy, bottom = subtitle) */}
+          {/* Hero Content — row: text left, logo right (logo top = Dr. Demo, bottom = subtitle) */}
           <div className="ot-icu-hero-content">
             <div className="ot-icu-hero-left">
               <StaggerContainer className="ot-icu-hero-text-stagger">
                 <div className="ot-icu-hero-title-group">
                   <div className="ot-icu-badge">Nellore Division</div>
                   <h1 className="ot-icu-title">
-                    <span className="ot-icu-title-dr">Dr. Ramaswamy Hospitals</span>
+                    <span className="ot-icu-title-dr">Dr. Demo Hospitals</span>
                     <span className="ot-icu-title-main">{t.otIcuCare.title}</span>
                   </h1>
                   <div className="ot-icu-divider"></div>
@@ -102,7 +102,7 @@ export default function OTIcuCare() {
             <div className="ot-icu-hero-logo">
               <img
                 src={otIcuLogo}
-                alt="Dr. Ramaswamy Hospitals — OT & ICU Care"
+                alt="Dr. Demo Hospitals — OT & ICU Care"
                 width="320"
                 height="120"
                 loading="eager"

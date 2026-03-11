@@ -1,12 +1,12 @@
-# Dr. Ramaswamy Hospitals - Frontend Website
+# Dr. Demo Hospitals - Frontend Website
 
 A modern, bilingual (English & Telugu) hospital website built with React and Vite, featuring a patient-centered design and comprehensive healthcare information.
 
-🌐 **Live Website**: [https://www.ramaswamyhospitals.com/](https://www.ramaswamyhospitals.com/)
+🌐 **Live Website**: [https://www.Demohospitals.com/](https://www.Demohospitals.com/)
 
 ## 🏥 About
 
-Frontend website for Dr. Ramaswamy Hospitals, Kavali - providing 25+ years of trusted healthcare services. The website offers a seamless user experience with multilingual support and modern UI/UX design.
+Frontend website for Dr. Demo Hospitals, Kavali - providing 25+ years of trusted healthcare services. The website offers a seamless user experience with multilingual support and modern UI/UX design.
 
 ## ✨ Features
 
@@ -177,7 +177,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 **Quick Deploy:**
 1. Push code to GitHub
 2. Render automatically builds and deploys
-3. Site is live at https://www.ramaswamyhospitals.com/
+3. Site is live at https://www.Demohospitals.com/
 
 ## 📝 Content Management
 
@@ -250,7 +250,7 @@ Currently, the project doesn't require environment variables for basic functiona
 For technical support or hosting issues, see [SUPPORT.md](./SUPPORT.md)
 
 **Quick Contacts:**
-- **Website**: https://www.ramaswamyhospitals.com/
+- **Website**: https://www.Demohospitals.com/
 - **Hospital Phone**: +91 99127 57854
 - **Location**: Kavali, Nellore District, Andhra Pradesh
 
@@ -329,9 +329,9 @@ Potential features for future development:
 
 ## 📜 License
 
-© 2025 Dr. Ramaswamy Hospitals. All rights reserved.
+© 2025 Dr. Demo Hospitals. All rights reserved.
 
-This is a proprietary project for Dr. Ramaswamy Hospitals, Kavali.
+This is a proprietary project for Dr. Demo Hospitals, Kavali.
 
 ## 👨‍💻 Development Team
 
@@ -344,6 +344,6 @@ This is a proprietary project for Dr. Ramaswamy Hospitals, Kavali.
 
 ---
 
-**Built with ❤️ for Dr. Ramaswamy Hospitals**
+**Built with ❤️ for Dr. Demo Hospitals**
 
 For questions or support, please refer to [SUPPORT.md](./SUPPORT.md)

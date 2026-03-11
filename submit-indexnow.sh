@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# IndexNow Submission Script for Dr.Ramaswamy Hospitals
+# IndexNow Submission Script for Dr.Demo Hospitals
 # Instantly notify search engines about website updates
 
 API_KEY="42d30eb996434c0ebf18a4e59f1a0d5f"
-SITE_URL="https://www.ramaswamyhospitals.com"
+SITE_URL="https://www.Demohospitals.com"
 
 # URLs to submit (add more URLs as needed)
 URLS=(
@@ -28,7 +28,7 @@ for url in "${URLS[@]}"; do
   response=$(curl -s -X POST "https://api.indexnow.org/indexnow" \
     -H "Content-Type: application/json" \
     -d "{
-      \"host\": \"www.ramaswamyhospitals.com\",
+      \"host\": \"www.Demohospitals.com\",
       \"key\": \"${API_KEY}\",
       \"keyLocation\": \"${SITE_URL}/${API_KEY}.txt\",
       \"urlList\": [\"${url}\"]
