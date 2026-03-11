@@ -260,9 +260,9 @@ function App() {
             </div>
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.contact}</NavLink>
           </nav>
-          <button className="hamburger" onClick={() => setMobileOpen(v => !v)} aria-label="Open menu" aria-expanded={mobileOpen}>
+          {/* <button className="hamburger" onClick={() => setMobileOpen(v => !v)} aria-label="Open menu" aria-expanded={mobileOpen}>
             ☰ Menu
-          </button>
+          </button> */}
         </div>
       </header>
       
